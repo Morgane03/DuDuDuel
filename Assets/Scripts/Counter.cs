@@ -4,14 +4,14 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Counteur : MonoBehaviour
+public class Counter : MonoBehaviour
 {
-    public FallObject fallObject;
     public TextMeshProUGUI text;
     private int number;
+    public bool go = false;
     void Start()
     {
-        number = 10;
+        number = 5;
         StartCoroutine(CounterNumber());
     }
 
@@ -27,8 +27,10 @@ public class Counteur : MonoBehaviour
         if (number == -1)
         {
             text.text = " ";
-            fallObject.Fall();
+            go = true;
             StopCoroutine(CounterNumber());
         }
     }
+
+    
 }

@@ -5,8 +5,20 @@ using UnityEngine;
 
 public class FallObject : MonoBehaviour
 {
-    public void Fall()
+    public Counter counter;
+
+    public float speed;
+    public void Update()
     {
-        gameObject.GetComponent<Rigidbody>().useGravity = true;
+        if (counter.go == true)
+        {
+            //gameObject.GetComponent<Rigidbody>().useGravity = true;
+            transform.Translate(Vector3.down * Time.deltaTime * speed);
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        counter.go = false;
     }
 }
