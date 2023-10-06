@@ -7,11 +7,10 @@ using UnityEngine;
 public class Counter : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    private int number;
+    public int number;
     public bool go = false;
     void Start()
     {
-        number = 5;
         StartCoroutine(CounterNumber());
     }
 
@@ -31,6 +30,4 @@ public class Counter : MonoBehaviour
             StopCoroutine(CounterNumber());
         }
     }
-
-    
 }
