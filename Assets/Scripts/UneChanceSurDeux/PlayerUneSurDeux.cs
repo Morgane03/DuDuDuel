@@ -10,6 +10,7 @@ public class PlayerUneSurDeux : MonoBehaviour
 
     void Update()
     {
+        //player1
         if (Input.GetKey(KeyCode.Q))
         {
             player1.transform.Translate(Vector3.left * Time.deltaTime * speed);
@@ -23,6 +24,7 @@ public class PlayerUneSurDeux : MonoBehaviour
             player1.transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
 
+        //player2
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             player2.transform.Translate(Vector3.left * Time.deltaTime * speed);
