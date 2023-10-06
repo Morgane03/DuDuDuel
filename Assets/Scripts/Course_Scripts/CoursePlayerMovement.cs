@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CoursePlayerMovement : MonoBehaviour
 {
-    [SerializeField] GameObject firstPlayer;
-    [SerializeField] GameObject secondPlayer;
+    [SerializeField] public GameObject firstPlayer;
+    [SerializeField] public GameObject secondPlayer;
     public float speed;
     public float jumpHeight;
     public Transform firstPlayerTransform;
@@ -45,5 +45,6 @@ public class CoursePlayerMovement : MonoBehaviour
         {
             secondPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
         }
+
     }
 }
