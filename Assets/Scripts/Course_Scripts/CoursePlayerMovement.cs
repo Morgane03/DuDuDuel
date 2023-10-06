@@ -8,25 +8,42 @@ public class CoursePlayerMovement : MonoBehaviour
     [SerializeField] GameObject secondPlayer;
     public float speed;
     public float jumpHeight;
-    float horizontal;
-    private Vector2 movement;
-
-    //public Rigidbody rb;
+    public Transform firstPlayerTransform;
+    public Transform secondPlayerTransform;
 
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
-
-
+        // first player movement
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * horizontal);
+            firstPlayerTransform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 
         if(Input.GetKey(KeyCode.Q))
         {
-            transform.Translate(Vector3.left * horizontal);
+            firstPlayerTransform.Translate(Vector3.left * Time.deltaTime * speed);
+        }
+        
+        if(Input.GetKey(KeyCode.Z))
+        {
+            firstPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
+        }
+
+        //second player movement
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            secondPlayerTransform.Translate(Vector3.right * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            secondPlayerTransform.Translate(Vector3.left * Time.deltaTime * speed);
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            secondPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
         }
     }
 }
