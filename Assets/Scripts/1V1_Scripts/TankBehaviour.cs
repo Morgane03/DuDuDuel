@@ -25,11 +25,11 @@ public class TankBehaviour : MonoBehaviour
     void Update()
     {
         // Input for moving First Player's tank :
-        //// Rajouter un If pour l'état du jeu 
-            if (Input.GetKey(KeyCode.S))
+        if (GameManager.Instance.gameLauched)
         {
+            if (Input.GetKey(KeyCode.S)) {
 
-            playerOne.transform.position += new Vector3(0, -(Time.deltaTime * tankSpeed), 0);
+                playerOne.transform.position += new Vector3(0, -(Time.deltaTime * tankSpeed), 0);
             }
 
             if (Input.GetKey(KeyCode.W)) {
@@ -42,7 +42,7 @@ public class TankBehaviour : MonoBehaviour
                 PlayerOneShot();
             }
 
-        // Input for moving Second Player's Tank :
+            // Input for moving Second Player's Tank :
 
             if (Input.GetKey(KeyCode.DownArrow)) {
 
@@ -58,6 +58,7 @@ public class TankBehaviour : MonoBehaviour
 
                 PlayerTwoShot();
             }
+        }
     }
 
     // Methods used to make Tanks shoot depending of which player

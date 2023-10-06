@@ -14,8 +14,8 @@ public class TanksWinCondition : MonoBehaviour
             Debug.Log("other Player has won");
 
             this.gameObject.SetActive(false);
-            //// switch l'état du jeu 
-
+            GameManager.Instance.gameLauched = false;
+            GameManager.Instance.TankDuelResults();
         }
 
     }
