@@ -18,6 +18,7 @@ public class CoursePlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
 
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * horizontal);
