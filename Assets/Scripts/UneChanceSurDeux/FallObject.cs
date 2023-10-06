@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using TMPro;
 using UnityEngine;
 
 public class FallObject : MonoBehaviour
 {
-    public Counter counter;
+    public GameManager gameManager;
 
     public float speed;
+
     private int randomPosition;
     public GameObject positionLeft;
     public GameObject positionRight;
-    public bool win;
+
 
     public void Start()
     {
@@ -19,17 +21,16 @@ public class FallObject : MonoBehaviour
     }
     public void Update()
     {
-        if (counter.go == true)
+        if (gameManager.gameLauched == true)
         {
             transform.Translate(Vector3.down * Time.deltaTime * speed);
         }
     }
-    
     public void RandomPosition()
     {
         randomPosition = Random.Range(0, 50);
 
-        if(randomPosition %2 == 0) //nombre paire
+        if (randomPosition % 2 == 0) //nombre paire
         {
             gameObject.transform.position = positionLeft.transform.position;
         }
@@ -40,27 +41,6 @@ public class FallObject : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        counter.go = false;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "PlayerOne" && other.tag == "PlayerTwo" && win == false)
-        {
-            Debug.Log("No winner");
-            win = true;
-        }
-
-        if(other.tag == "PlayerOne" && win == false)
-        {
-            Debug.Log("Player 2 win");
-            win = true;
-        }
-
-        if (other.tag == "PlayerTwo" && win == false)
-        {
-            Debug.Log("Player 1 win");
-            win = true;
-        }
+        gameManager.gameLauched = false;
     }
 }
