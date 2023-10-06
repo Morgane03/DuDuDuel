@@ -9,7 +9,7 @@ public class Counter : MonoBehaviour
     public TextMeshProUGUI text;
     public int number;
     public bool go = false;
-    void Start()
+    public void OnClick()
     {
         StartCoroutine(CounterNumber());
     }
