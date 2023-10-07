@@ -4,31 +4,17 @@ using UnityEngine;
 
 public class Winer : MonoBehaviour
 {
-
-    public CoursePlayerMovement coursePlayerMovement;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider playercollider)
     {
-        if (coursePlayerMovement.firstPlayer = playercollider.gameObject)
+        
+       if(playercollider.gameObject.tag == "PlayerOne")
         {
-            Debug.Log("J1 Win");
+            Debug.Log("Player1 win");
         }
-        /*
-        if(coursePlayerMovement.secondPlayer = playercollider.gameObject)
+        
+       if(playercollider.gameObject.tag == "PlayerTwo")
         {
-            Debug.Log("J2 Win");
-        }*/
+            Debug.Log("Player2 win");
+        }
     }
 }
