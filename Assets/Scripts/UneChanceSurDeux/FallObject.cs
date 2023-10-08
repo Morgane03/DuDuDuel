@@ -41,5 +41,6 @@ public class FallObject : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         gameManager.gameLauched = false;
+        gameManager.ChanceGameResult();
     }
 }

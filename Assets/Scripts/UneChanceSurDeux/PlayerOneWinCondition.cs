@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class PlayerOneWinCondition : MonoBehaviour
 {
-    public bool win;
-    public TextMeshProUGUI textWin;
-
+    public bool firstDie;
     public void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Tank" && win == false)
+        if (collision.tag == "Tank")
         {
-            textWin.text = "Player 2 win";
-            win = true;
+            firstDie = true;
         }
     }
 }
