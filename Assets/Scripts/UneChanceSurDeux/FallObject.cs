@@ -14,7 +14,6 @@ public class FallObject : MonoBehaviour
     public GameObject positionLeft;
     public GameObject positionRight;
 
-
     public void Start()
     {
         RandomPosition();
