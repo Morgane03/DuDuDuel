@@ -16,18 +16,16 @@ public class GameManager : MonoBehaviour
                 Debug.Log("GameManger is null");
             }
             return _instance;
+
         }
     }
 
     void Awake()
     {
+        // DontDestroyOnLoad(this);
         _instance = this;
-        DontDestroyOnLoad(this);
     }
 
-    [Header("Player Scores")]
-    public int scorePlayerOne;
-    public int scorePlayerTwo;
 
     [Header("Game Canvas")]
     public GameObject DuelCanva;
@@ -56,20 +54,23 @@ public class GameManager : MonoBehaviour
 
     public void LaunchGame()
     {
-
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "1v1")
         {
             cooldownText = DuelCanva.gameObject.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
+            
         }
         if (scene.name == "UneChanceSurDeux")
         {
             cooldownText = chanceGameCanva.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+
         }
         if (scene.name == "Course")
         {
             cooldownText = raceCanva.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+
         }
+        Debug.Log("BEFORE COROUTINE");
         StartCoroutine(CooldownBeforeLaunch());
     }
 
@@ -134,6 +135,7 @@ public class GameManager : MonoBehaviour
         if (number != -1)
         {
             StartCoroutine(CooldownBeforeLaunch());
+
         }
         if (number == -1)
         {

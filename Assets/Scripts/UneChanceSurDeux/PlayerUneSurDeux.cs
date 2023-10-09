@@ -8,18 +8,13 @@ public class PlayerUneSurDeux : MonoBehaviour
     public float speed;
     public GameObject player1;
     public GameObject player2;
-    public GameManager gameManager;
 
     void Update()
     {
-        if (gameManager.gameLauched)
+        if (GameManager.Instance.gameLauched)
         {
             //player1
-            if (Input.GetKey(KeyCode.Q))
-            {
-                player1.transform.Translate(Vector3.left * Time.deltaTime * speed);
-            }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.A))
             {
                 player1.transform.Translate(Vector3.left * Time.deltaTime * speed);
             }

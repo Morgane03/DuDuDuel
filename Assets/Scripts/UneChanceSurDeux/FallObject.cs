@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class FallObject : MonoBehaviour
 {
-    public GameManager gameManager;
-
     public float speed;
 
     private int randomPosition;
@@ -20,7 +18,7 @@ public class FallObject : MonoBehaviour
     }
     public void Update()
     {
-        if (gameManager.gameLauched == true)
+        if (GameManager.Instance.gameLauched)
         {
             transform.Translate(Vector3.down * Time.deltaTime * speed);
         }
@@ -29,7 +27,7 @@ public class FallObject : MonoBehaviour
     {
         randomPosition = Random.Range(0, 50);
 
-        if (randomPosition % 2 == 0) //nombre paire
+        if (randomPosition % 2 == 0) // nombre pair
         {
             gameObject.transform.position = positionLeft.transform.position;
         }
@@ -40,7 +38,7 @@ public class FallObject : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        gameManager.gameLauched = false;
-        gameManager.ChanceGameResult();
+        GameManager.Instance.gameLauched = false;
+        GameManager.Instance.ChanceGameResult();
     }
 }

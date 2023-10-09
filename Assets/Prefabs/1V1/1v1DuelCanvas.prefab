@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 1037200578425693040}
   - component: {fileID: 3364929303090420336}
   m_Layer: 5
-  m_Name: ResultText
+  m_Name: CooldownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
