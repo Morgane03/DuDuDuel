@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
     public PlayerOneWinCondition playerOneWinCondition;
     public PlayerTwoWinCondition playerTwoWinCondition;
 
+    public Winer playerOneWin;
+    public Winer playerTwoWin;
+
 
     public void LaunchGame()
     {
@@ -60,6 +63,10 @@ public class GameManager : MonoBehaviour
         if (scene.name == "UneChanceSurDeux")
         {
             cooldownText = chanceGameCanva.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        }
+        if (scene.name == "Course")
+        {
+            cooldownText = raceCanva.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         }
         StartCoroutine(CooldownBeforeLaunch());
     }
@@ -100,6 +107,19 @@ public class GameManager : MonoBehaviour
         if (playerOneWinCondition.firstDie == false && playerTwoWinCondition.secondDie == false)
         {
             chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Everyone has won";
+        }
+    }
+
+    public void RaceResult()
+    {
+        gameLauched = false;
+        if(playerOneWin.colliderZoneWinFP)
+        {
+            raceCanva.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = " Player One has won !";
+        }
+        if(playerTwoWin.colliderZoneWinSP)
+        {
+            raceCanva.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = " Player Two has won !";
         }
     }
 
