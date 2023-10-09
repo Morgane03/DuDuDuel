@@ -45,9 +45,11 @@ public class GameManager : MonoBehaviour
     public TanksWinCondition firstPlayerTank;
     public TanksWinCondition secondPlayerTank;
 
+    [Header("Chance Game")]
     public PlayerOneWinCondition playerOneWinCondition;
     public PlayerTwoWinCondition playerTwoWinCondition;
 
+    [Header("Winner Race Game")]
     public Winer playerOneWin;
     public Winer playerTwoWin;
 

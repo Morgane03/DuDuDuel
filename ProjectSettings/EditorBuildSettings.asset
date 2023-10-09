@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1v1.unity
     guid: 5a26af65409a3694fa0374268b32eb7d
+  - enabled: 1
+    path: Assets/Scenes/UneChanceSurDeux.unity
+    guid: 5244e7cb53f0d674584f5eead7e5a1e3
+  - enabled: 1
+    path: Assets/Scenes/Course.unity
+    guid: f129ceea58532094b85fc063e680f54d
   m_configObjects: {}
