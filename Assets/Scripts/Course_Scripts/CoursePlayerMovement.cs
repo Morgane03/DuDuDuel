@@ -14,36 +14,39 @@ public class CoursePlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // first player movement
-        if (Input.GetKey(KeyCode.D))
+        if(GameManager.Instance.gameLauched)
         {
-            firstPlayerTransform.Translate(Vector3.right * speed * Time.deltaTime);
-        }
+            // first player movement
+            if (Input.GetKey(KeyCode.D))
+            {
+                firstPlayerTransform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
 
-        if(Input.GetKey(KeyCode.Q))
-        {
-            firstPlayerTransform.Translate(Vector3.left * Time.deltaTime * speed);
-        }
-        
-        if(Input.GetKey(KeyCode.Z))
-        {
-            firstPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
-        }
+            if (Input.GetKey(KeyCode.Q))
+            {
+                firstPlayerTransform.Translate(Vector3.left * Time.deltaTime * speed);
+            }
 
-        //second player movement
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            secondPlayerTransform.Translate(Vector3.right * speed * Time.deltaTime);
-        }
+            if (Input.GetKey(KeyCode.Z))
+            {
+                firstPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
+            }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            secondPlayerTransform.Translate(Vector3.left * Time.deltaTime * speed);
-        }
+            //second player movement
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                secondPlayerTransform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            secondPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                secondPlayerTransform.Translate(Vector3.left * Time.deltaTime * speed);
+            }
+
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                secondPlayerTransform.Translate(Vector3.up * Time.deltaTime * jumpHeight);
+            }
         }
 
     }

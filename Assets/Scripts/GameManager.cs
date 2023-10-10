@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
         {
             chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Everyone has won";
         }
+        chanceGameCanva.gameObject.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     public void RaceResult()
@@ -118,12 +119,13 @@ public class GameManager : MonoBehaviour
         gameLauched = false;
         if(playerOneWin.colliderZoneWinFP)
         {
-            raceCanva.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = " Player One has won !";
+            raceCanva.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = " Player Two has won !";
         }
         if(playerTwoWin.colliderZoneWinSP)
         {
-            raceCanva.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = " Player Two has won !";
+            raceCanva.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = " Player One has won !";
         }
+        raceCanva.gameObject.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     IEnumerator CooldownBeforeLaunch()

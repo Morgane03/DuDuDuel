@@ -7,7 +7,7 @@ public class Winer : MonoBehaviour
     public bool colliderZoneWinFP = false;
     public bool colliderZoneWinSP = false;
 
-    GameManager gameManager;
+    
 
 
     public void OnTriggerEnter(Collider playercollider)
@@ -17,7 +17,8 @@ public class Winer : MonoBehaviour
         {
             //Debug.Log("Player1 win");
             colliderZoneWinFP = true;
-            gameManager.RaceResult();
+            GameManager.Instance.RaceResult();
+
             colliderZoneWinFP = false;
         }
         
@@ -25,7 +26,7 @@ public class Winer : MonoBehaviour
         {
             //Debug.Log("Player2 win");
             colliderZoneWinSP = true;
-            gameManager.RaceResult();
+            GameManager.Instance.RaceResult();
             colliderZoneWinSP = false;
         }
     }
