@@ -1250,8 +1250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -426.3269, y: -2.0757217}
-  m_SizeDelta: {x: 781.2783, y: 840.3709}
+  m_AnchoredPosition: {x: -425.0802, y: -2.0757217}
+  m_SizeDelta: {x: 778.7849, y: 840.3709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638613288
 MonoBehaviour:
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 604ed3badedf30a4fb1caf7d05cb5ca9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5847040e11668374e84aa9b025c13092, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2123517214}
+      - m_Target: {fileID: 1776204169}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2091,7 +2091,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Player One : Can move using left and right arrows, up arrow to jump.
+
+
+    Player
+    Two : Can move to the left using A Key and to the right using D Key, W Key to
+    Jump
+
+
+    Goal : the first player who reaches the end of the end is the winner'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -2437,7 +2445,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Player One : Move with Z or S and shoot with D.
+
+
+    Player Two : Move
+    with up and down arrow keys, use left arrow key to shoot.
+
+
+    Goal : First
+    player to kill the other player win.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -3437,8 +3453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 443.19, y: -64}
-  m_SizeDelta: {x: 813.63, y: 723.2798}
+  m_AnchoredPosition: {x: 443.19, y: -55.2733}
+  m_SizeDelta: {x: 813.63, y: 740.7332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392723715
 MonoBehaviour:
@@ -3460,7 +3476,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Player One (Blue) : Move with Q or D.
+
+
+    Player tWO (Red) : Move with
+    left and right arrow keys.
+
+
+    GOal : A giant wooden crate will fall, you must
+    avoid it in order to win this game. Problem : you can''t see it until it''s too
+    late, so you have to chose a side and prey to not get pounded.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -3487,7 +3512,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 46.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5074,7 +5099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1776204170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5608,7 +5633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7c3821e80f8d23f48afbda27eb437aae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
