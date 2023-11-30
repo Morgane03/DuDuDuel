@@ -13,8 +13,6 @@ public class BulletBehaviour : MonoBehaviour
 
         // Define bullet trajectory 
         this.GetComponent<Rigidbody2D>().velocity = this.transform.right * bulletSpeed;
-
-
     }
 
 

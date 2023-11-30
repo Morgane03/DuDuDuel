@@ -46,6 +46,11 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
         _jumpDirection = context.ReadValue<Vector2>();
     }
 
+    public void OnFireBulletP1(InputAction.CallbackContext context)
+    {
+        //
+    }
+
     // Update is called once per frame
     void Update()
     {

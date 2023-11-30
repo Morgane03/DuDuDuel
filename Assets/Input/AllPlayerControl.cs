@@ -44,6 +44,15 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FireBulletP1"",
+                    ""type"": ""Button"",
+                    ""id"": ""be24b1cb-a334-4207-8425-1370e983a3c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -145,6 +154,17 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""164ecd7d-db7f-4a4f-9030-7375f14b39d4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBulletP1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -169,6 +189,15 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FireBulletP2"",
+                    ""type"": ""Button"",
+                    ""id"": ""f234c8ff-6769-4a88-9bc9-fea6f5b3ea2f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -270,6 +299,17 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""action"": ""MoveP2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""156f5aee-57b4-4ba3-bf60-1853dabaf8a9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBulletP2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -294,6 +334,15 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FireBulletP3"",
+                    ""type"": ""Button"",
+                    ""id"": ""79adb05f-0bb6-4a3c-b661-210829641966"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -406,6 +455,17 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""action"": ""MoveP3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58707d25-e948-44a8-9268-cd088254fe83"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBulletP3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -430,6 +490,15 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FireBulletP4"",
+                    ""type"": ""Button"",
+                    ""id"": ""fc20e681-c157-4c21-9e23-0cc0122ef2b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -540,6 +609,17 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""MoveP4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f1bd90a-b352-40fe-9b11-f9dad62994f4"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBulletP4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1254,18 +1334,22 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_FireBulletP1 = m_Player.FindAction("FireBulletP1", throwIfNotFound: true);
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_MoveP2 = m_Player2.FindAction("MoveP2", throwIfNotFound: true);
         m_Player2_Look = m_Player2.FindAction("Look", throwIfNotFound: true);
+        m_Player2_FireBulletP2 = m_Player2.FindAction("FireBulletP2", throwIfNotFound: true);
         // Player3
         m_Player3 = asset.FindActionMap("Player3", throwIfNotFound: true);
         m_Player3_MoveP3 = m_Player3.FindAction("MoveP3", throwIfNotFound: true);
         m_Player3_Look = m_Player3.FindAction("Look", throwIfNotFound: true);
+        m_Player3_FireBulletP3 = m_Player3.FindAction("FireBulletP3", throwIfNotFound: true);
         // Player4
         m_Player4 = asset.FindActionMap("Player4", throwIfNotFound: true);
         m_Player4_MoveP4 = m_Player4.FindAction("MoveP4", throwIfNotFound: true);
         m_Player4_Look = m_Player4.FindAction("Look", throwIfNotFound: true);
+        m_Player4_FireBulletP4 = m_Player4.FindAction("FireBulletP4", throwIfNotFound: true);
         // Jump
         m_Jump = asset.FindActionMap("Jump", throwIfNotFound: true);
         m_Jump_Jump = m_Jump.FindAction("Jump", throwIfNotFound: true);
@@ -1345,12 +1429,14 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_FireBulletP1;
     public struct PlayerActions
     {
         private @AllPlayerControl m_Wrapper;
         public PlayerActions(@AllPlayerControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @FireBulletP1 => m_Wrapper.m_Player_FireBulletP1;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1366,6 +1452,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @FireBulletP1.started += instance.OnFireBulletP1;
+            @FireBulletP1.performed += instance.OnFireBulletP1;
+            @FireBulletP1.canceled += instance.OnFireBulletP1;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1376,6 +1465,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @FireBulletP1.started -= instance.OnFireBulletP1;
+            @FireBulletP1.performed -= instance.OnFireBulletP1;
+            @FireBulletP1.canceled -= instance.OnFireBulletP1;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1399,12 +1491,14 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
     private List<IPlayer2Actions> m_Player2ActionsCallbackInterfaces = new List<IPlayer2Actions>();
     private readonly InputAction m_Player2_MoveP2;
     private readonly InputAction m_Player2_Look;
+    private readonly InputAction m_Player2_FireBulletP2;
     public struct Player2Actions
     {
         private @AllPlayerControl m_Wrapper;
         public Player2Actions(@AllPlayerControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @MoveP2 => m_Wrapper.m_Player2_MoveP2;
         public InputAction @Look => m_Wrapper.m_Player2_Look;
+        public InputAction @FireBulletP2 => m_Wrapper.m_Player2_FireBulletP2;
         public InputActionMap Get() { return m_Wrapper.m_Player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1420,6 +1514,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @FireBulletP2.started += instance.OnFireBulletP2;
+            @FireBulletP2.performed += instance.OnFireBulletP2;
+            @FireBulletP2.canceled += instance.OnFireBulletP2;
         }
 
         private void UnregisterCallbacks(IPlayer2Actions instance)
@@ -1430,6 +1527,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @FireBulletP2.started -= instance.OnFireBulletP2;
+            @FireBulletP2.performed -= instance.OnFireBulletP2;
+            @FireBulletP2.canceled -= instance.OnFireBulletP2;
         }
 
         public void RemoveCallbacks(IPlayer2Actions instance)
@@ -1453,12 +1553,14 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
     private List<IPlayer3Actions> m_Player3ActionsCallbackInterfaces = new List<IPlayer3Actions>();
     private readonly InputAction m_Player3_MoveP3;
     private readonly InputAction m_Player3_Look;
+    private readonly InputAction m_Player3_FireBulletP3;
     public struct Player3Actions
     {
         private @AllPlayerControl m_Wrapper;
         public Player3Actions(@AllPlayerControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @MoveP3 => m_Wrapper.m_Player3_MoveP3;
         public InputAction @Look => m_Wrapper.m_Player3_Look;
+        public InputAction @FireBulletP3 => m_Wrapper.m_Player3_FireBulletP3;
         public InputActionMap Get() { return m_Wrapper.m_Player3; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1474,6 +1576,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @FireBulletP3.started += instance.OnFireBulletP3;
+            @FireBulletP3.performed += instance.OnFireBulletP3;
+            @FireBulletP3.canceled += instance.OnFireBulletP3;
         }
 
         private void UnregisterCallbacks(IPlayer3Actions instance)
@@ -1484,6 +1589,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @FireBulletP3.started -= instance.OnFireBulletP3;
+            @FireBulletP3.performed -= instance.OnFireBulletP3;
+            @FireBulletP3.canceled -= instance.OnFireBulletP3;
         }
 
         public void RemoveCallbacks(IPlayer3Actions instance)
@@ -1507,12 +1615,14 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
     private List<IPlayer4Actions> m_Player4ActionsCallbackInterfaces = new List<IPlayer4Actions>();
     private readonly InputAction m_Player4_MoveP4;
     private readonly InputAction m_Player4_Look;
+    private readonly InputAction m_Player4_FireBulletP4;
     public struct Player4Actions
     {
         private @AllPlayerControl m_Wrapper;
         public Player4Actions(@AllPlayerControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @MoveP4 => m_Wrapper.m_Player4_MoveP4;
         public InputAction @Look => m_Wrapper.m_Player4_Look;
+        public InputAction @FireBulletP4 => m_Wrapper.m_Player4_FireBulletP4;
         public InputActionMap Get() { return m_Wrapper.m_Player4; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1528,6 +1638,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @FireBulletP4.started += instance.OnFireBulletP4;
+            @FireBulletP4.performed += instance.OnFireBulletP4;
+            @FireBulletP4.canceled += instance.OnFireBulletP4;
         }
 
         private void UnregisterCallbacks(IPlayer4Actions instance)
@@ -1538,6 +1651,9 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @FireBulletP4.started -= instance.OnFireBulletP4;
+            @FireBulletP4.performed -= instance.OnFireBulletP4;
+            @FireBulletP4.canceled -= instance.OnFireBulletP4;
         }
 
         public void RemoveCallbacks(IPlayer4Actions instance)
@@ -1776,21 +1892,25 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnFireBulletP1(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
         void OnMoveP2(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnFireBulletP2(InputAction.CallbackContext context);
     }
     public interface IPlayer3Actions
     {
         void OnMoveP3(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnFireBulletP3(InputAction.CallbackContext context);
     }
     public interface IPlayer4Actions
     {
         void OnMoveP4(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnFireBulletP4(InputAction.CallbackContext context);
     }
     public interface IJumpActions
     {
