@@ -65,6 +65,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
 
             //fourth player movement
             fourthPlayerTransform.Translate(_direction4 * (speed * Time.deltaTime));*/
+
         }
     }
 }
