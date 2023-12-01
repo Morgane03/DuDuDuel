@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2580300172146975977}
   - component: {fileID: 2222772776338526834}
   - component: {fileID: 7858755356936379768}
+  - component: {fileID: -3043914916939599232}
+  - component: {fileID: 7652509779566156317}
   m_Layer: 0
   m_Name: Player2
   m_TagString: PlayerTwo
@@ -149,3 +151,158 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &-3043914916939599232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144001752229915307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 0a6e7e7d7cbe1264880732e98051b3ce, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6e2e25fa-5034-4843-bd39-159cf751f85b
+    m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f518d1d-0cd0-4fd7-a1dd-4c9d40fc2c87
+    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: be24b1cb-a334-4207-8425-1370e983a3c3
+    m_ActionName: Player/FireBulletP1[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7652509779566156317}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnMoveP2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f09eb426-517a-4f0e-8971-cac07ee7e416
+    m_ActionName: Player2/MoveP2[/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 60b9a5d8-a5b3-4dc3-b098-733457a619d5
+    m_ActionName: Player2/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f234c8ff-6769-4a88-9bc9-fea6f5b3ea2f
+    m_ActionName: Player2/FireBulletP2[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0a3431de-688a-4ae2-ba2f-f2c22d9e6ce5
+    m_ActionName: Player3/MoveP3[/Keyboard/t,/Keyboard/f,/Keyboard/h]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ac5a72c5-a1cf-4c58-bd56-484d3862f2e2
+    m_ActionName: Player3/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 79adb05f-0bb6-4a3c-b661-210829641966
+    m_ActionName: Player3/FireBulletP3
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f17fbae0-1884-4800-af43-e618f5c44771
+    m_ActionName: Player4/MoveP4[/Keyboard/i,/Keyboard/j,/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4bcb89d7-ba1d-48b6-b511-f66fe4ff86b1
+    m_ActionName: Player4/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
+    m_ActionName: Player4/FireBulletP4
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
+    m_ActionName: Jump/Jump[/Keyboard/upArrow,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
+    m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3cebe9a0-c46e-4f84-b754-1fe9da41e861
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8b8a4769-32c6-49e4-ab20-ed7bbc461bb4
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6fa60cf9-61d1-44cc-978e-25c1796a5c43
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d15f8357-d005-4c3c-a69c-b9431b89de9e
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb086bcd-c8ca-4cce-99ae-0ce9ec70e2e1
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e3b728e1-1879-4426-a6de-7361dd61f2a3
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aada0022-c47f-4407-b816-46d1eb25f48b
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dcabe4ec-5bbf-4896-978d-ebde6d34a813
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 69b2f8e5-4042-450f-8aa7-a0c769122846
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed5187e4-25ef-45b6-9713-657aa05cf3f3
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player2
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &7652509779566156317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144001752229915307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff82f9b9b328db4bb6b7f67b1e8738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  firstPlayerTransform: {fileID: 7763040284957778767, guid: 8832d49b51713d34a90aeae6066e523c, type: 3}
+  secondPlayerTransform: {fileID: 1378904147403936077}
+  thirdPlayerTransform: {fileID: 1378904147403936077, guid: 42dc6b87afaa3c64897d06c999141cde, type: 3}
+  fourthPlayerTransform: {fileID: 1378904147403936077, guid: 414c620189e55f04fae449d87d134abc, type: 3}

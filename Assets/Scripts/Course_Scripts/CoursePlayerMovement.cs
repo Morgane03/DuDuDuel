@@ -8,8 +8,8 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     public float speed;
     public Transform firstPlayerTransform;
     public Transform secondPlayerTransform;
-    //public Transform thirdPlayerTransform;
-    //public Transform fourthPlayerTransform;
+    public Transform thirdPlayerTransform;
+    public Transform fourthPlayerTransform;
 
     private Vector3 _direction;
     private Vector3 _direction2;
@@ -31,7 +31,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     {
         _direction2 = context.ReadValue<Vector2>();
     }
-    /*
+    
     public void OnMoveP3(InputAction.CallbackContext context)
     {
         _direction3 = context.ReadValue<Vector2>();
@@ -40,7 +40,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     {
         _direction4 = context.ReadValue<Vector2>();
     }
-    */
+    
     public void OnJump(InputAction.CallbackContext context)
     {
         _jumpDirection = context.ReadValue<Vector2>();
@@ -64,12 +64,12 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
             secondPlayerTransform.Translate(_direction2 * (speed * Time.deltaTime));
             secondPlayerTransform.Translate(_jumpDirection * (speed * Time.deltaTime));
 
-            /*
+            
             //third player movement
             thirdPlayerTransform.Translate(_direction3 * (speed * Time.deltaTime));
 
             //fourth player movement
-            fourthPlayerTransform.Translate(_direction4 * (speed * Time.deltaTime));*/
+            fourthPlayerTransform.Translate(_direction4 * (speed * Time.deltaTime));
 
         }
     }
