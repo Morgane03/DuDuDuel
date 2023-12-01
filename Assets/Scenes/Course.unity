@@ -7224,8 +7224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rbP1: {fileID: 1056139908}
-  firstPlayerTransform: {fileID: 1056139906}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
   thirdPlayerTransform: {fileID: 624337461}
   fourthPlayerTransform: {fileID: 1115755779}
@@ -12132,8 +12131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rbP1: {fileID: 1056139908}
-  firstPlayerTransform: {fileID: 1056139906}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
   thirdPlayerTransform: {fileID: 624337461}
   fourthPlayerTransform: {fileID: 1115755779}
@@ -13317,8 +13315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rbP1: {fileID: 1056139908}
-  firstPlayerTransform: {fileID: 1056139906}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
   thirdPlayerTransform: {fileID: 624337461}
   fourthPlayerTransform: {fileID: 1115755779}
@@ -17232,8 +17229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  rbP1: {fileID: 1056139908}
-  firstPlayerTransform: {fileID: 1056139906}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
   thirdPlayerTransform: {fileID: 624337461}
   fourthPlayerTransform: {fileID: 1115755779}
