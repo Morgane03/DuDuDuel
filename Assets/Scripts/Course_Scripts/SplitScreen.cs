@@ -53,10 +53,10 @@ public class SplitScreen : MonoBehaviour
             secondCamera.gameObject.SetActive(true);
             thirdCamera.gameObject.SetActive(true);
             fourthCamera.gameObject.SetActive(true);
-            firstCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
-            secondCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
-            thirdCamera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
-            fourthCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            firstCamera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
+            secondCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            thirdCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
+            fourthCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
         }
     }
 }
