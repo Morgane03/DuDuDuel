@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 2411072767287474412}
   - component: {fileID: 8693960055452408859}
   - component: {fileID: 1411927957237594296}
-  - component: {fileID: 5928029790203089976}
   - component: {fileID: 8417275862221016790}
   - component: {fileID: -528713136955295489}
-  - component: {fileID: 8374636805648834065}
+  - component: {fileID: 7677996333412503232}
   m_Layer: 0
   m_Name: Player1
   m_TagString: PlayerOne
@@ -103,7 +102,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -111,19 +110,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &5928029790203089976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3384951045057432991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f90e33b145807f45851a03ddc87598b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstDie: 0
 --- !u!54 &8417275862221016790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,7 +135,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &-528713136955295489
 MonoBehaviour:
@@ -178,7 +164,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8374636805648834065}
+      - m_Target: {fileID: 7677996333412503232}
         m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -289,7 +275,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8374636805648834065
+--- !u!114 &7677996333412503232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff82f9b9b328db4bb6b7f67b1e8738c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 80
   firstPlayerTransform: {fileID: 7763040284957778767}
   secondPlayerTransform: {fileID: 1378904147403936077, guid: 570b390e1a1d7c74b9265e1b545d2259, type: 3}
   thirdPlayerTransform: {fileID: 1378904147403936077, guid: 42dc6b87afaa3c64897d06c999141cde, type: 3}

@@ -44,8 +44,7 @@ public class GameManager : MonoBehaviour
     public TanksWinCondition secondPlayerTank;
 
     [Header("Chance Game")]
-    public PlayerOneWinCondition playerOneWinCondition;
-    public PlayerTwoWinCondition playerTwoWinCondition;
+    
 
     [Header("Winner Race Game")]
     public Winer playerOneWin;
@@ -60,7 +59,7 @@ public class GameManager : MonoBehaviour
             cooldownText = DuelCanva.gameObject.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
             
         }
-        if (scene.name == "UneChanceSurDeux")
+        if (scene.name == "Box")
         {
             cooldownText = chanceGameCanva.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
 
@@ -95,23 +94,23 @@ public class GameManager : MonoBehaviour
     {
         gameLauched = false;
 
-        if (playerOneWinCondition.firstDie)
-        {
-            chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Player Two has won !";
-        }
-        if (playerTwoWinCondition.secondDie)
-        {
-            chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Player One has won !";
-        }
-        if (playerOneWinCondition.firstDie && playerTwoWinCondition.secondDie)
-        {
-            chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Nobody has won";
-        }
-        if (playerOneWinCondition.firstDie == false && playerTwoWinCondition.secondDie == false)
-        {
-            chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Everyone has won";
-        }
-        chanceGameCanva.gameObject.transform.GetChild(3).gameObject.SetActive(true);
+        //if (playerOneWinCondition.firstDie)
+        //{
+        //    chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Player Two has won !";
+        //}
+        //if (playerTwoWinCondition.secondDie)
+        //{
+        //    chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Player One has won !";
+        //}
+        //if (playerOneWinCondition.firstDie && playerTwoWinCondition.secondDie)
+        //{
+        //    chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Nobody has won";
+        //}
+        //if (playerOneWinCondition.firstDie == false && playerTwoWinCondition.secondDie == false)
+        //{
+        //    chanceGameCanva.gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "Everyone has won";
+        //}
+        //chanceGameCanva.gameObject.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     public void RaceResult()

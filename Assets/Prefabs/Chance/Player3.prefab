@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 4086517492598169677}
   - component: {fileID: 2255436880745089081}
   - component: {fileID: 2580300172146975977}
-  - component: {fileID: 2222772776338526834}
   - component: {fileID: 7858755356936379768}
+  - component: {fileID: -6061721356568785204}
   - component: {fileID: 3253655415512254458}
-  - component: {fileID: 7663223156623640999}
   m_Layer: 0
   m_Name: Player3
   m_TagString: PlayerTwo
@@ -103,7 +102,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -111,19 +110,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &2222772776338526834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144001752229915307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c845f91ce959af74db1a9497a4265d8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  secondDie: 0
 --- !u!54 &7858755356936379768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,8 +135,25 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-6061721356568785204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144001752229915307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04589c5ac210f71469c6aaab1b586d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  playerOne: {fileID: 3384951045057432991, guid: 8832d49b51713d34a90aeae6066e523c, type: 3}
+  playerTwo: {fileID: 2144001752229915307, guid: 570b390e1a1d7c74b9265e1b545d2259, type: 3}
+  playerThree: {fileID: 2144001752229915307}
+  playerFour: {fileID: 2144001752229915307, guid: 414c620189e55f04fae449d87d134abc, type: 3}
 --- !u!114 &3253655415512254458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,8 +205,8 @@ MonoBehaviour:
     m_ActionName: Player2/FireBulletP2[/Keyboard/p]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7663223156623640999}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: -6061721356568785204}
+        m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
         m_MethodName: OnMoveP3
         m_Mode: 0
         m_Arguments:
@@ -289,20 +292,3 @@ MonoBehaviour:
   m_DefaultActionMap: Player3
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7663223156623640999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144001752229915307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff82f9b9b328db4bb6b7f67b1e8738c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
-  firstPlayerTransform: {fileID: 7763040284957778767, guid: 8832d49b51713d34a90aeae6066e523c, type: 3}
-  secondPlayerTransform: {fileID: 1378904147403936077, guid: 570b390e1a1d7c74b9265e1b545d2259, type: 3}
-  thirdPlayerTransform: {fileID: 1378904147403936077}
-  fourthPlayerTransform: {fileID: 1378904147403936077, guid: 414c620189e55f04fae449d87d134abc, type: 3}
