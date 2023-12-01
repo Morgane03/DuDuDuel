@@ -860,56 +860,6 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Jump"",
-            ""id"": ""635c59c9-2163-4f28-afb3-6e6713c1058d"",
-            ""actions"": [
-                {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""de39af89-22b3-4523-871e-94f4ee2b498f"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""a856496f-deda-43e3-8640-32f3c73cb67e"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""076b1814-ce26-4992-a15c-a3daee99eec1"",
-                    ""path"": ""<Pointer>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse;Touch"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""715df68e-5c6f-4eb2-b0e6-cd79425ba681"",
-                    ""path"": ""<Joystick>/{Hatswitch}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
             ""name"": ""UI"",
             ""id"": ""1af0d491-265e-4860-be89-324701755a07"",
             ""actions"": [
@@ -1513,9 +1463,6 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
         m_Player4_Jump = m_Player4.FindAction("Jump", throwIfNotFound: true);
         m_Player4_Look = m_Player4.FindAction("Look", throwIfNotFound: true);
         m_Player4_FireBulletP4 = m_Player4.FindAction("FireBulletP4", throwIfNotFound: true);
-        // Jump
-        m_Jump = asset.FindActionMap("Jump", throwIfNotFound: true);
-        m_Jump_Look = m_Jump.FindAction("Look", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1866,52 +1813,6 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
     }
     public Player4Actions @Player4 => new Player4Actions(this);
 
-    // Jump
-    private readonly InputActionMap m_Jump;
-    private List<IJumpActions> m_JumpActionsCallbackInterfaces = new List<IJumpActions>();
-    private readonly InputAction m_Jump_Look;
-    public struct JumpActions
-    {
-        private @AllPlayerControl m_Wrapper;
-        public JumpActions(@AllPlayerControl wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Look => m_Wrapper.m_Jump_Look;
-        public InputActionMap Get() { return m_Wrapper.m_Jump; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(JumpActions set) { return set.Get(); }
-        public void AddCallbacks(IJumpActions instance)
-        {
-            if (instance == null || m_Wrapper.m_JumpActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_JumpActionsCallbackInterfaces.Add(instance);
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
-        }
-
-        private void UnregisterCallbacks(IJumpActions instance)
-        {
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
-        }
-
-        public void RemoveCallbacks(IJumpActions instance)
-        {
-            if (m_Wrapper.m_JumpActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IJumpActions instance)
-        {
-            foreach (var item in m_Wrapper.m_JumpActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_JumpActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public JumpActions @Jump => new JumpActions(this);
-
     // UI
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
@@ -2101,10 +2002,6 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFireBulletP4(InputAction.CallbackContext context);
-    }
-    public interface IJumpActions
-    {
-        void OnLook(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

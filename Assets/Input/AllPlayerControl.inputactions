@@ -838,56 +838,6 @@
             ]
         },
         {
-            "name": "Jump",
-            "id": "635c59c9-2163-4f28-afb3-6e6713c1058d",
-            "actions": [
-                {
-                    "name": "Look",
-                    "type": "Value",
-                    "id": "de39af89-22b3-4523-871e-94f4ee2b498f",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "a856496f-deda-43e3-8640-32f3c73cb67e",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "076b1814-ce26-4992-a15c-a3daee99eec1",
-                    "path": "<Pointer>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse;Touch",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "715df68e-5c6f-4eb2-b0e6-cd79425ba681",
-                    "path": "<Joystick>/{Hatswitch}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "UI",
             "id": "1af0d491-265e-4860-be89-324701755a07",
             "actions": [

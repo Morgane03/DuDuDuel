@@ -9420,7 +9420,7 @@ MonoBehaviour:
     m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player4
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!65 &1115755781
