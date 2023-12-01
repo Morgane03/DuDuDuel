@@ -5155,8 +5155,8 @@ GameObject:
   m_Component:
   - component: {fileID: 624337461}
   - component: {fileID: 624337465}
-  - component: {fileID: 624337464}
   - component: {fileID: 624337463}
+  - component: {fileID: 624337464}
   - component: {fileID: 624337462}
   m_Layer: 0
   m_Name: PlayerThree
@@ -5207,19 +5207,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 624337464}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 6e2e25fa-5034-4843-bd39-159cf751f85b
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -5275,7 +5263,19 @@ MonoBehaviour:
     m_ActionId: 60b9a5d8-a5b3-4dc3-b098-733457a619d5
     m_ActionName: Player2/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624337464}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnMoveP3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0a3431de-688a-4ae2-ba2f-f2c22d9e6ce5
     m_ActionName: Player3/MoveP3[/Keyboard/upArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -5310,9 +5310,25 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: be24b1cb-a334-4207-8425-1370e983a3c3
+    m_ActionName: Player/FireBulletP1[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f234c8ff-6769-4a88-9bc9-fea6f5b3ea2f
+    m_ActionName: Player2/FireBulletP2[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 79adb05f-0bb6-4a3c-b661-210829641966
+    m_ActionName: Player3/FireBulletP3
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
+    m_ActionName: Player4/FireBulletP4
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player3
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!65 &624337463
@@ -5349,8 +5365,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  firstPlayerTransform: {fileID: 624337461}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
+  thirdPlayerTransform: {fileID: 624337461}
+  fourthPlayerTransform: {fileID: 1115755779}
 --- !u!54 &624337465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8804,8 +8822,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1056139907}
   - component: {fileID: 1056139908}
-  - component: {fileID: 1056139909}
   - component: {fileID: 1056139910}
+  - component: {fileID: 1056139909}
   - component: {fileID: 1056139911}
   m_Layer: 0
   m_Name: PlayerOne
@@ -8872,6 +8890,8 @@ MonoBehaviour:
   speed: 5
   firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
+  thirdPlayerTransform: {fileID: 624337461}
+  fourthPlayerTransform: {fileID: 1115755779}
 --- !u!65 &1056139910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9022,6 +9042,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: be24b1cb-a334-4207-8425-1370e983a3c3
+    m_ActionName: Player/FireBulletP1[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f234c8ff-6769-4a88-9bc9-fea6f5b3ea2f
+    m_ActionName: Player2/FireBulletP2[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 79adb05f-0bb6-4a3c-b661-210829641966
+    m_ActionName: Player3/FireBulletP3
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
+    m_ActionName: Player4/FireBulletP4
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -9140,8 +9176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1115755779}
   - component: {fileID: 1115755783}
-  - component: {fileID: 1115755782}
   - component: {fileID: 1115755781}
+  - component: {fileID: 1115755782}
   - component: {fileID: 1115755780}
   m_Layer: 0
   m_Name: PlayerFour
@@ -9192,19 +9228,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1115755782}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 6e2e25fa-5034-4843-bd39-159cf751f85b
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -9268,7 +9292,19 @@ MonoBehaviour:
     m_ActionId: ac5a72c5-a1cf-4c58-bd56-484d3862f2e2
     m_ActionName: Player3/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1115755782}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnMoveP4
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f17fbae0-1884-4800-af43-e618f5c44771
     m_ActionName: Player4/MoveP4[/Keyboard/upArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -9350,8 +9386,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  firstPlayerTransform: {fileID: 1115755779}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
+  thirdPlayerTransform: {fileID: 624337461}
+  fourthPlayerTransform: {fileID: 1115755779}
 --- !u!54 &1115755783
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11985,8 +12023,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1436660831}
   - component: {fileID: 1436660832}
-  - component: {fileID: 1436660833}
   - component: {fileID: 1436660834}
+  - component: {fileID: 1436660833}
   - component: {fileID: 1436660835}
   m_Layer: 0
   m_Name: PlayerTwo
@@ -12051,8 +12089,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  firstPlayerTransform: {fileID: 1436660831}
+  firstPlayerTransform: {fileID: 1056139907}
   secondPlayerTransform: {fileID: 1436660831}
+  thirdPlayerTransform: {fileID: 624337461}
+  fourthPlayerTransform: {fileID: 1115755779}
 --- !u!65 &1436660834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12203,6 +12243,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: be24b1cb-a334-4207-8425-1370e983a3c3
+    m_ActionName: Player/FireBulletP1[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f234c8ff-6769-4a88-9bc9-fea6f5b3ea2f
+    m_ActionName: Player2/FireBulletP2[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 79adb05f-0bb6-4a3c-b661-210829641966
+    m_ActionName: Player3/FireBulletP3
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
+    m_ActionName: Player4/FireBulletP4
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
