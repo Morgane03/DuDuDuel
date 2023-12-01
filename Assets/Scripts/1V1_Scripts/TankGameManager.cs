@@ -74,7 +74,10 @@ public class TankGameManager : MonoBehaviour
 
     }
 
-
+    public void LaunchGame() {
+        isGameStarted= true;
+        startCanvas.SetActive(false);
+    }
 
 
     public void EndOfTheGame() {
