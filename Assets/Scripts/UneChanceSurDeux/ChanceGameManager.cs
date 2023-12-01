@@ -48,7 +48,9 @@ public class ChanceGameManager : MonoBehaviour
         {
             gameLauch = false;
             textWin.text = "player 1 win";
-            //ScoreManager.Instance.ScoreUpdatePlayerOne += Notify;
+            scoreWin = 100;
+            ScoreManager.Instance.ScoreUpdatePlayerOne += Notify;
+
         }
 
         if (playerOneDie && playerThreeDie && playerFourDie && !playerTwoDie)
@@ -76,9 +78,9 @@ public class ChanceGameManager : MonoBehaviour
         }
     }
 
-    //public void Notify(int score)
-    //{
-    //    score = scoreWin;
-    //    Debug.Log(score);
-    //}
+    public void Notify(int score)
+    {
+        scoreWin += score;
+        ScoreManager.Instance.SetScorePlayerOne(score);
+    }
 }

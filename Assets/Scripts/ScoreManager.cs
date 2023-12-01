@@ -24,7 +24,6 @@ public class ScoreManager : MonoBehaviour
         _instance = this;
     }
 
-
     public int Score { get; private set; }
 
     public event Action<int> ScoreUpdatePlayerOne;
@@ -39,8 +38,9 @@ public class ScoreManager : MonoBehaviour
 
     public void SetScorePlayerOne(int updateScoreOne)
     {
+        scorePlayerOne = 50;  
         scorePlayerOne += updateScoreOne;
         ScoreUpdatePlayerOne?.Invoke(scorePlayerOne);
-        Debug.Log("dxfcgvhj");
+        Debug.Log(scorePlayerOne);
     }
 }
