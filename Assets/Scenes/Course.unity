@@ -5326,22 +5326,6 @@ MonoBehaviour:
     m_ActionId: 4bcb89d7-ba1d-48b6-b511-f66fe4ff86b1
     m_ActionName: Player4/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 624337464}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump[/Keyboard/upArrow,/Keyboard/w]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
@@ -5361,6 +5345,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
     m_ActionName: Player4/FireBulletP4
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 624337464}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player3
@@ -9058,22 +9070,6 @@ MonoBehaviour:
     m_ActionId: 4bcb89d7-ba1d-48b6-b511-f66fe4ff86b1
     m_ActionName: Player4/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1056139909}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump[/Keyboard/upArrow,/Keyboard/w]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
@@ -9093,6 +9089,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
     m_ActionName: Player4/FireBulletP4
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1056139909}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -9347,22 +9371,6 @@ MonoBehaviour:
     m_ActionId: 4bcb89d7-ba1d-48b6-b511-f66fe4ff86b1
     m_ActionName: Player4/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1115755782}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump[/Keyboard/upArrow,/Keyboard/w]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
@@ -9382,6 +9390,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
     m_ActionName: Player4/FireBulletP4
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1115755782}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -12259,22 +12295,6 @@ MonoBehaviour:
     m_ActionId: 4bcb89d7-ba1d-48b6-b511-f66fe4ff86b1
     m_ActionName: Player4/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1436660833}
-        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump[/Keyboard/upArrow,/Keyboard/w]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
     m_ActionName: Jump/Look[/Mouse/delta,/Pen/delta]
@@ -12294,6 +12314,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fc20e681-c157-4c21-9e23-0cc0122ef2b6
     m_ActionName: Player4/FireBulletP4
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1436660833}
+        m_TargetAssemblyTypeName: CoursePlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2

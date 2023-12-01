@@ -43,7 +43,6 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     
     public void OnJump(InputAction.CallbackContext context)
     {
-        Debug.Log("Jump");
         _jumpDirection = context.ReadValue<Vector2>();
     }
 
@@ -68,9 +67,11 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
             
             //third player movement
             thirdPlayerTransform.Translate(_direction3 * (speed * Time.deltaTime));
+            thirdPlayerTransform.Translate(_jumpDirection * (speed * Time.deltaTime));
 
             //fourth player movement
             fourthPlayerTransform.Translate(_direction4 * (speed * Time.deltaTime));
+            fourthPlayerTransform.Translate(_jumpDirection * (speed * Time.deltaTime));
 
         }
     }

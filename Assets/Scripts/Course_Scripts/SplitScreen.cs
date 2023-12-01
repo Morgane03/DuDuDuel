@@ -14,7 +14,6 @@ public class SplitScreen : MonoBehaviour
 
     public void DisplayPlayer(int nbPlayer)
     {
-        Debug.Log(nbPlayer);
         for(int i = 0; i< nbPlayer; i++)
         {
             player[i].SetActive(true);
