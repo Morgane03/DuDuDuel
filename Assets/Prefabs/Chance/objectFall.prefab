@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6293683420834451455}
   - component: {fileID: 6223609058538040540}
   - component: {fileID: 1842033167820940818}
-  - component: {fileID: 4256644272559099419}
   - component: {fileID: 5883191118742090742}
   - component: {fileID: 4935114234567763069}
+  - component: {fileID: -6591679534854696071}
   - component: {fileID: 5108547132434787045}
   m_Layer: 0
   m_Name: objectFall
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 6862165720124065311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.934792, y: 199.3, z: 106.8}
-  m_LocalScale: {x: 32.60721, y: 32.60721, z: 5}
+  m_LocalPosition: {x: -22.474922, y: 199.3, z: 106.8}
+  m_LocalScale: {x: 27.471182, y: 27.471182, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4256644272559099419
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6862165720124065311}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5883191118742090742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +128,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &-6591679534854696071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862165720124065311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac468025850f6f49b18762fc7fd473f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &5108547132434787045
 BoxCollider:
   m_ObjectHideFlags: 0

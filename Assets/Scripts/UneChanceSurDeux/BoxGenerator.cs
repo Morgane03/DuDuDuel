@@ -13,11 +13,8 @@ public class BoxGenerator : MonoBehaviour
 
     public GameObject positionLeft;
     public GameObject positionRight;
-    public void Start()
-    {
-        NewBox();
-    }
-    public void RandomSize()
+
+    public void RandomSize() //random taille de la caisse
     {
         Vector3 randomLenght = lenghtA - lenghtB;
         boxLenght = lenghtA + Random.value * randomLenght;
@@ -30,19 +27,23 @@ public class BoxGenerator : MonoBehaviour
         boxPrefab.transform.position = targetPos;
     }
 
-    public void NewBox()
+    public void CreateBox()
     {
-        StartCoroutine(CreatBox());
+        if (ChanceGameManager.Instance.gameLauch)
+        {
+            RandomSize();
+            GameObject newBox = Instantiate(boxPrefab);
+            newBox.GetComponent<FallObject>();
+            newBox.GetComponent<PlayerLoseCondition>();
+            RandomPosition();
+
+            StartCoroutine(WaitForNewBox());
+        }
     }
 
-    IEnumerator CreatBox()
+    IEnumerator WaitForNewBox()
     {
-        RandomSize();
-        GameObject newBox = Instantiate(boxPrefab);
-        newBox.GetComponent<FallObject>();
-        RandomPosition();
-
-        yield return new WaitForSeconds(2);
-        NewBox();
+        yield return new WaitForSeconds(1);
+        CreateBox();
     }
 }
