@@ -6,6 +6,7 @@ public class BulletBehaviour : MonoBehaviour
 {
     [Header("Bullet Caracteristics")]
     public int bulletSpeed = 3;
+    public int pointGivenOnHit = 1;
 
     public TankShooting tankShooting;
 
@@ -17,14 +18,13 @@ public class BulletBehaviour : MonoBehaviour
 
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.otherCollider == gameObject.GetComponent<TankTarget>()) {
-
+        if(!TankGameManager.Instance.isGameFinished) {
+            TankGameManager.Instance.GetPoint(pointGivenOnHit, tankShooting);
         }
         Destroy(gameObject);
     }
 
     public void SetShooter(TankShooting shooter) {
         tankShooting = shooter;
-
     }
 }

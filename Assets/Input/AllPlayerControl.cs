@@ -47,12 +47,12 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""FireBulletP1"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""be24b1cb-a334-4207-8425-1370e983a3c3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -303,7 +303,7 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""156f5aee-57b4-4ba3-bf60-1853dabaf8a9"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/p"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
