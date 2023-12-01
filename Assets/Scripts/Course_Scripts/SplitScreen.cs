@@ -34,7 +34,7 @@ public class SplitScreen : MonoBehaviour
         {
             firstCamera.gameObject.SetActive(true);
             secondCamera.gameObject.SetActive(true);
-            firstCamera.rect = new Rect(0, 0, 1f, 1);
+            firstCamera.rect = new Rect(0, 0, 1f, 0.5F);
             secondCamera.rect = new Rect(0, 0.5f, 1f, 1);
         }
         else if(nbPlayer == 3)

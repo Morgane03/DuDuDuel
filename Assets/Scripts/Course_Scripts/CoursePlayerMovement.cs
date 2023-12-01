@@ -43,6 +43,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     
     public void OnJump(InputAction.CallbackContext context)
     {
+        Debug.Log("Jump");
         _jumpDirection = context.ReadValue<Vector2>();
     }
 

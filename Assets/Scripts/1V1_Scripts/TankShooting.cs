@@ -56,4 +56,6 @@ public class TankShooting : MonoBehaviour, AllPlayerControl.IPlayerActions
         }
         
     }
+
+    public void OnJump(InputAction.CallbackContext context) { /* Does nothing */ }
 }
