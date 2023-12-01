@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 108931070}
-  - component: {fileID: 108931069}
   - component: {fileID: 108931071}
   m_Layer: 0
   m_Name: GameObject
@@ -141,21 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &108931069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108931068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f1803c1285187458bb50ec22d8779a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  player1: {fileID: 6374742641776029630}
-  player2: {fileID: 2785549568265871020}
 --- !u!4 &108931070
 Transform:
   m_ObjectHideFlags: 0
@@ -471,8 +455,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 41.853508, y: 91.37911, z: 51.683445}
-  m_Center: {x: -123.105286, y: -20.689556, z: -0.8417187}
+  m_Size: {x: 39.13144, y: 91.37911, z: 51.683445}
+  m_Center: {x: -124.466324, y: -20.689556, z: -0.8417187}
 --- !u!4 &1820475451
 Transform:
   m_ObjectHideFlags: 0
@@ -825,11 +809,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570b390e1a1d7c74b9265e1b545d2259, type: 3}
---- !u!1 &2785549568265871020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2144001752229915307, guid: 570b390e1a1d7c74b9265e1b545d2259, type: 3}
-  m_PrefabInstance: {fileID: 2785549568265871019}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4509190999616664207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1126,11 +1105,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8832d49b51713d34a90aeae6066e523c, type: 3}
---- !u!1 &6374742641776029630 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3384951045057432991, guid: 8832d49b51713d34a90aeae6066e523c, type: 3}
-  m_PrefabInstance: {fileID: 6374742641776029629}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7639648571571300605
 GameObject:
   m_ObjectHideFlags: 0

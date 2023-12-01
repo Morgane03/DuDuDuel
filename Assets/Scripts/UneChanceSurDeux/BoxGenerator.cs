@@ -42,7 +42,7 @@ public class BoxGenerator : MonoBehaviour
         newBox.GetComponent<FallObject>();
         RandomPosition();
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         NewBox();
     }
 }
