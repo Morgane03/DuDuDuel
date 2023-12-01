@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour, AllPlayerControl.IPlayerActions
 
     public void OnFireBulletP1(InputAction.CallbackContext context){}
     public void OnLook(InputAction.CallbackContext context) {}
+    public void OnJump(InputAction.CallbackContext context) { }
 
     public void OnMove(InputAction.CallbackContext context)
     {
