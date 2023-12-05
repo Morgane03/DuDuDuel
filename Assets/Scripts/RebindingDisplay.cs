@@ -13,14 +13,18 @@ public class RebindingDisplay : MonoBehaviour
     [SerializeField] private PlayerInput _playerFourInput;
 
 
-    [Header("UI Renderer")]
+    [Header("UI InputBox")]
     [SerializeField] private GameObject inputBoxP1;
     [SerializeField] private GameObject inputBoxP2;
     [SerializeField] private GameObject inputBoxP3;
     [SerializeField] private GameObject inputBoxP4;
 
+    [Header("UI InputText")]
+    [SerializeField] private TMP_Text boundInputTextP1;
+    [SerializeField] private TMP_Text boundInputTextP2;
+    [SerializeField] private TMP_Text boundInputTextP3;
+    [SerializeField] private TMP_Text boundInputTextP4;
 
-    [SerializeField] private TMP_Text boundInputText;
 
     public InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
@@ -38,7 +42,7 @@ public class RebindingDisplay : MonoBehaviour
             .WithControlsExcluding("<Gamepad>/start")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation =>
-                RebindComplete(_playerOneInput.actions[str]))
+                RebindComplete(_playerOneInput.actions[str], 1))
             .Start();
     }
 
@@ -55,7 +59,7 @@ public class RebindingDisplay : MonoBehaviour
             .WithControlsExcluding("<Gamepad>/start")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation =>
-                RebindComplete(_playerTwoInput.actions[str]))
+                RebindComplete(_playerTwoInput.actions[str], 2))
             .Start();
     }
 
@@ -72,7 +76,7 @@ public class RebindingDisplay : MonoBehaviour
             .WithControlsExcluding("<Gamepad>/start")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation =>
-                RebindComplete(_playerThreeInput.actions[str]))
+                RebindComplete(_playerThreeInput.actions[str], 3))
             .Start();
     }
 
@@ -89,39 +93,56 @@ public class RebindingDisplay : MonoBehaviour
             .WithControlsExcluding("<Gamepad>/start")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation =>
-                RebindComplete(_playerFourInput.actions[str]))
+                RebindComplete(_playerFourInput.actions[str], 4))
             .Start();
     }
 
 
-    public void RebindComplete(InputAction _inputAction) {
-        int bindingIndex = _inputAction.GetBindingIndexForControl(_inputAction.controls[0]);
+    public void RebindComplete(InputAction _inputAction, int i) {
 
-        boundInputText.text = InputControlPath.ToHumanReadableString(
+        string boundKey = InputControlPath.ToHumanReadableString(
             _inputAction.bindings[0].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
 
-        /* string path = _inputAction.bindings[0].overridePath;
-        Debug.Log(path); */
-
-        //_inputAction.ApplyBindingOverride(path, _inputAction.bindings[0].path);
 
         _inputAction.Enable();
 
         rebindingOperation.Dispose();
 
+        switch (i)
+        {
+            case 1:
+
+                boundInputTextP1.text = boundKey;
+
+                inputBoxP1.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                inputBoxP1.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+                break;
+            case 2:
+
+                boundInputTextP2.text = boundKey;
+
+                inputBoxP2.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                inputBoxP2.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+                break;
+            case 3:
+
+                boundInputTextP3.text = boundKey;
+
+                inputBoxP3.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                inputBoxP3.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+                break;
+            case 4:
+
+                boundInputTextP4.text = boundKey;
+
+                inputBoxP4.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                inputBoxP4.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+                break;
+        }
 
 
-        inputBoxP1.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-        inputBoxP1.gameObject.transform.GetChild(2).gameObject.SetActive(false);
 
-        inputBoxP2.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-        inputBoxP2.gameObject.transform.GetChild(2).gameObject.SetActive(false);
 
-        inputBoxP3.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-        inputBoxP3.gameObject.transform.GetChild(2).gameObject.SetActive(false);
-        
-        inputBoxP4.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-        inputBoxP4.gameObject.transform.GetChild(2).gameObject.SetActive(false);
     }
 }

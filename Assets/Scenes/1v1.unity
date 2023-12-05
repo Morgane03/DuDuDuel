@@ -1234,7 +1234,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8019451625250197968}
         m_TargetAssemblyTypeName: RebindingDisplay, Assembly-CSharp
-        m_MethodName: StartRebindingP1
+        m_MethodName: StartRebindingP4
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1619,7 +1619,7 @@ GameObject:
   - component: {fileID: 397293569}
   - component: {fileID: 397293568}
   m_Layer: 5
-  m_Name: boundInputText
+  m_Name: boundInputTextP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2476,7 +2476,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 597578792}
-  - {fileID: 2046657089}
   - {fileID: 1557778999}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2670,7 +2669,7 @@ GameObject:
   - component: {fileID: 626757361}
   - component: {fileID: 626757360}
   m_Layer: 5
-  m_Name: boundInputText
+  m_Name: boundInputTextP3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,7 +2803,7 @@ GameObject:
   - component: {fileID: 628341126}
   - component: {fileID: 628341125}
   m_Layer: 5
-  m_Name: InputBox (2)
+  m_Name: InputBoxP3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3192,7 +3191,7 @@ GameObject:
   - component: {fileID: 989047954}
   - component: {fileID: 989047953}
   m_Layer: 5
-  m_Name: InputBox (1)
+  m_Name: InputBoxP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3270,7 +3269,7 @@ GameObject:
   - component: {fileID: 994244209}
   - component: {fileID: 994244208}
   m_Layer: 5
-  m_Name: boundInputText
+  m_Name: boundInputTextP4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4056,7 +4055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1157863614
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4643,7 +4642,7 @@ GameObject:
   - component: {fileID: 1402932474}
   - component: {fileID: 1402932473}
   m_Layer: 5
-  m_Name: InputBox (3)
+  m_Name: InputBoxP4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4857,7 +4856,7 @@ GameObject:
   - component: {fileID: 1543794155}
   - component: {fileID: 1543794154}
   m_Layer: 5
-  m_Name: InputBox
+  m_Name: InputBoxP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5086,6 +5085,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 308678587}
+  - {fileID: 2046657089}
   - {fileID: 1157863614}
   m_Father: {fileID: 486488951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5449,7 +5449,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8019451625250197968}
         m_TargetAssemblyTypeName: RebindingDisplay, Assembly-CSharp
-        m_MethodName: StartRebindingP1
+        m_MethodName: StartRebindingP3
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6731,7 +6731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8019451625250197968}
         m_TargetAssemblyTypeName: RebindingDisplay, Assembly-CSharp
-        m_MethodName: StartRebindingP1
+        m_MethodName: StartRebindingP2
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7290,12 +7290,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046657088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 486488951}
+  m_Father: {fileID: 1557778999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7851,7 +7851,7 @@ GameObject:
   - component: {fileID: 319459255734634137}
   - component: {fileID: 206885083852744364}
   m_Layer: 5
-  m_Name: boundInputText
+  m_Name: boundInputTextP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7966,7 +7966,10 @@ MonoBehaviour:
   inputBoxP2: {fileID: 989047951}
   inputBoxP3: {fileID: 628341123}
   inputBoxP4: {fileID: 1402932471}
-  boundInputText: {fileID: 206885083852744364}
+  boundInputTextP1: {fileID: 206885083852744364}
+  boundInputTextP2: {fileID: 397293568}
+  boundInputTextP3: {fileID: 626757360}
+  boundInputTextP4: {fileID: 994244208}
 --- !u!224 &8110431295889702461
 RectTransform:
   m_ObjectHideFlags: 0
