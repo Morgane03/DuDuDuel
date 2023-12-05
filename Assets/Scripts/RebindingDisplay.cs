@@ -140,9 +140,5 @@ public class RebindingDisplay : MonoBehaviour
                 inputBoxP4.gameObject.transform.GetChild(2).gameObject.SetActive(false);
                 break;
         }
-
-
-
-
     }
 }
