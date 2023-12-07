@@ -257,8 +257,7 @@ MonoBehaviour:
   isPlayerTwoDied: 0
   isPlayerThreeDied: 0
   isPlayerFourDied: 0
-  scoreText: {fileID: 0}
-  scoreWin: 0
+  chanceGamePlayerList: []
 --- !u!4 &977626333
 Transform:
   m_ObjectHideFlags: 0

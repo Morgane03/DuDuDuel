@@ -6,32 +6,15 @@ public class PlayerLoseCondition : MonoBehaviour
 {
     public void OnTriggerEnter(Collider other)
     { 
-        if(other.name == "Player1")
+        if(other.tag == "Player")
         {
-            ChanceGameManager.Instance.isPlayerOneDied = true;
-            other.gameObject.SetActive(false);
-            ChanceGameManager.Instance.PlayerWin();
+            OnPlayerDeath(other.gameObject);
         }
+    }
 
-        if (other.name == "Player2")
-        {
-            ChanceGameManager.Instance.isPlayerTwoDied = true;
-            other.gameObject.SetActive(false);
-            ChanceGameManager.Instance.PlayerWin();
-        }
-
-        if (other.name == "Player3")
-        {
-            ChanceGameManager.Instance.isPlayerThreeDied = true;
-            other.gameObject.SetActive(false);
-            ChanceGameManager.Instance.PlayerWin();
-        }
-
-        if (other.name == "Player4")
-        {
-            ChanceGameManager.Instance.isPlayerFourDied = true;
-            other.gameObject.SetActive(false);
-            ChanceGameManager.Instance.PlayerWin();
-        }
+    public void OnPlayerDeath(GameObject gameObject)
+    {
+        gameObject.GetComponent<PlayerIDs>();
+        ChanceGameManager.Instance.chanceGamePlayerList.Remove(gameObject.GetComponent<PlayerIDs>());
     }
 }

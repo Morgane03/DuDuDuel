@@ -36,18 +36,17 @@ public class ChanceGameManager : MonoBehaviour
     public bool isPlayerThreeDied;
     public bool isPlayerFourDied;
 
-    public List<GameObject> playerList;
+    public List<PlayerIDs> chanceGamePlayerList;
 
-    public int scoreWin = 1;
     public void StartGame()
     {
         gameLauch = true;
         boxGenerator.CreateBox();
     }
 
-    public void PlayerWin()
+    public void ChanceGamePlayerNumber()
     {
-
+        
     }
 
 }

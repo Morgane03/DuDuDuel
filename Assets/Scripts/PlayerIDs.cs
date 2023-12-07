@@ -5,4 +5,9 @@ using UnityEngine;
 public class PlayerIDs : MonoBehaviour
 {
     [SerializeField] private int playerId;
+
+    public int GetPlayerID()
+    {
+        return playerId;
+    }
 }
