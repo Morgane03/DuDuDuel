@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 173454552}
   - component: {fileID: 173454551}
   - component: {fileID: 173454555}
+  - component: {fileID: 173454557}
   - component: {fileID: 173454556}
   m_Layer: 0
   m_Name: SecondPlayerTank
@@ -489,14 +490,6 @@ MonoBehaviour:
     m_ActionName: Player4/FireBulletP4
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
-    m_ActionName: Jump/Look
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 3cebe9a0-c46e-4f84-b754-1fe9da41e861
     m_ActionName: UI/Navigate
   - m_PersistentCalls:
@@ -535,11 +528,40 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ed5187e4-25ef-45b6-9713-657aa05cf3f3
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &173454557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173454550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb86e42988d8318428c7c33cba48ae7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 2
 --- !u!1 &173958853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1317,7 @@ GameObject:
   - component: {fileID: 374560854}
   - component: {fileID: 374560853}
   - component: {fileID: 374560857}
+  - component: {fileID: 374560859}
   - component: {fileID: 374560858}
   m_Layer: 0
   m_Name: FourthPlayerTank
@@ -1556,14 +1579,6 @@ MonoBehaviour:
     m_ActionName: Player4/FireBulletP4
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
-    m_ActionName: Jump/Look
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 3cebe9a0-c46e-4f84-b754-1fe9da41e861
     m_ActionName: UI/Navigate
   - m_PersistentCalls:
@@ -1602,11 +1617,40 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ed5187e4-25ef-45b6-9713-657aa05cf3f3
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player4
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &374560859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374560852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb86e42988d8318428c7c33cba48ae7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 4
 --- !u!1 &397293566
 GameObject:
   m_ObjectHideFlags: 0
@@ -6345,6 +6389,7 @@ GameObject:
   - component: {fileID: 1830401479}
   - component: {fileID: 1830401478}
   - component: {fileID: 1830401481}
+  - component: {fileID: 1830401483}
   - component: {fileID: 1830401477}
   - component: {fileID: 1830401482}
   m_Layer: 0
@@ -6595,14 +6640,6 @@ MonoBehaviour:
     m_ActionName: Player4/FireBulletP4
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
-    m_ActionName: Jump/Look
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 3cebe9a0-c46e-4f84-b754-1fe9da41e861
     m_ActionName: UI/Navigate
   - m_PersistentCalls:
@@ -6641,11 +6678,40 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ed5187e4-25ef-45b6-9713-657aa05cf3f3
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1830401483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830401476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb86e42988d8318428c7c33cba48ae7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 1
 --- !u!1 &1833205015
 GameObject:
   m_ObjectHideFlags: 0
@@ -6792,6 +6858,7 @@ GameObject:
   - component: {fileID: 1965609745}
   - component: {fileID: 1965609744}
   - component: {fileID: 1965609748}
+  - component: {fileID: 1965609750}
   - component: {fileID: 1965609749}
   m_Layer: 0
   m_Name: ThirdPlayerTank
@@ -7053,14 +7120,6 @@ MonoBehaviour:
     m_ActionName: Player4/FireBulletP4
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1fe121b6-655e-4bf8-bb30-ba9f763ddbe3
-    m_ActionName: Jump/Jump
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: de39af89-22b3-4523-871e-94f4ee2b498f
-    m_ActionName: Jump/Look
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 3cebe9a0-c46e-4f84-b754-1fe9da41e861
     m_ActionName: UI/Navigate
   - m_PersistentCalls:
@@ -7099,11 +7158,40 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ed5187e4-25ef-45b6-9713-657aa05cf3f3
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32c07e56-e9c1-447e-b629-26f89b643c8e
+    m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 271ec0c8-fdbc-4c26-83b7-e3e1a6cacb82
+    m_ActionName: Player2/Jump[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33eefb08-fbda-482f-914c-6dfbb382513e
+    m_ActionName: Player3/Jump[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6bec18-640d-49c5-a42d-91b98e7b9ed2
+    m_ActionName: Player4/Jump[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player3
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1965609750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965609743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb86e42988d8318428c7c33cba48ae7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 3
 --- !u!1 &1986674745
 GameObject:
   m_ObjectHideFlags: 0
