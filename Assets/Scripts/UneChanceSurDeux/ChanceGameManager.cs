@@ -30,12 +30,6 @@ public class ChanceGameManager : MonoBehaviour
     public BoxGenerator boxGenerator;
     public TextMeshProUGUI textWin;
 
-    [SerializeField]
-    public bool isPlayerOneDied;
-    public bool isPlayerTwoDied;
-    public bool isPlayerThreeDied;
-    public bool isPlayerFourDied;
-
     public List<PlayerIDs> chanceGamePlayerList;
 
     public void StartGame()
@@ -46,7 +40,10 @@ public class ChanceGameManager : MonoBehaviour
 
     public void ChanceGamePlayerNumber()
     {
-        
+        if(chanceGamePlayerList.Count == 0)
+        {
+
+        }
     }
 
 }

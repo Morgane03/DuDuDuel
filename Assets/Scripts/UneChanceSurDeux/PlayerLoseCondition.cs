@@ -16,5 +16,7 @@ public class PlayerLoseCondition : MonoBehaviour
     {
         gameObject.GetComponent<PlayerIDs>();
         ChanceGameManager.Instance.chanceGamePlayerList.Remove(gameObject.GetComponent<PlayerIDs>());
+        gameObject.SetActive(false);
+        Debug.Log(gameObject.name);
     }
 }

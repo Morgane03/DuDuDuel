@@ -4475,8 +4475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 15, y: -319}
-  m_SizeDelta: {x: 1210.404, y: 389}
+  m_AnchoredPosition: {x: 17, y: -319}
+  m_SizeDelta: {x: 1661.8345, y: 389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682904490
 MonoBehaviour:
@@ -4498,7 +4498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DU-DU-DU-DUEL !
+  m_text: DU-DU-DU-DUEL!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -4525,7 +4525,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 176.35
+  m_fontSize: 190.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
