@@ -65,7 +65,7 @@ public partial class @AllPlayerControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""FireBulletP2"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""c6cbae39-809d-4b9f-be06-bcc014877d3f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",

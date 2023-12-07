@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TankGameManager : MonoBehaviour
 {
-    public event Action<int> PlayerOneScore;
-    public event Action<int> PlayerTwoScore;
-    public event Action<int> PlayerThreeScore;
-    public event Action<int> PlayerFourScore;
-
     [Header("Players")]
     public GameObject PlayerOne;
     public GameObject PlayerTwo;
@@ -23,25 +18,34 @@ public class TankGameManager : MonoBehaviour
     public List<int> playersScoresEndOfTheGame = new List<int>();
 
 
-    [Header("PlayerIDList")]
-    public List<PlayerIDs> PlayerIDs;
-
     [Header("Game State")]
     public GameObject startCanvas;
     public bool isGameStarted = false;
     public bool isGameFinished = false;
 
+    [Header("UI Indications for Players in Game")]
+    public GameObject uiPlayer3Indication;
+    public GameObject uiPlayer4Indication;
    
 
-    private static TankGameManager instance;
-    public static TankGameManager Instance { get { if (instance == null) { }
-            return instance;
+    private static TankGameManager _instance;
+    public static TankGameManager Instance { 
+        get { 
+            if (_instance == null) {
+                Debug.Log("TankGameManager is null");
+            }
+            return _instance;
         }
     }
 
     void Awake() {
-        if (Instance == null) { instance = this; }
+        _instance = this; 
     }
+
+    public event Action<int> PlayerOneScore;
+    public event Action<int> PlayerTwoScore;
+    public event Action<int> PlayerThreeScore;
+    public event Action<int> PlayerFourScore;
 
     public void Start() {
         isGameStarted = false;
@@ -50,6 +54,25 @@ public class TankGameManager : MonoBehaviour
 
         startCanvas.SetActive(true);
     }
+
+
+    public void LaunchGame() {
+        isGameStarted = true;
+        startCanvas.SetActive(false);
+
+        if(DeviceManager.Instance.playersWanted == 3) {
+            PlayerFour.SetActive(false);
+            uiPlayer3Indication.SetActive(false);
+        }
+        else if(DeviceManager.Instance.playersWanted == 2) {
+            PlayerFour.SetActive(false);
+            PlayerThree.SetActive(false);
+
+            uiPlayer3Indication.SetActive(false);
+            uiPlayer4Indication.SetActive(false);
+        }
+    }
+
 
     public void GetPoint(int i, TankShooting tankShooting) {
         // Debug.Log(tankShooting);
@@ -72,19 +95,14 @@ public class TankGameManager : MonoBehaviour
             P4TankGameScore += i;
             PlayerFourScore?.Invoke(P4TankGameScore);
         }
-
     }
 
-    public void LaunchGame() {
-        isGameStarted= true;
-        startCanvas.SetActive(false);
-    }
 
 
     public void EndOfTheGame() {
-        Debug.Log("fin du duel");
-        isGameStarted= false;
-        isGameFinished= true;
+
+        isGameStarted = false;
+        isGameFinished = true;
 
         playersScoresEndOfTheGame.Add(P1TankGameScore);
         playersScoresEndOfTheGame.Add(P2TankGameScore);
@@ -98,7 +116,7 @@ public class TankGameManager : MonoBehaviour
     public void GameResults() {
 
         int maxScore = 0;
-        // va servir à récupérer l'index de la boucle pour connaître le gagnant de la partie
+        // picks up loop index to know which player has won.
         int loopIndex = 0;
 
         for (int i = 0; i < playersScoresEndOfTheGame.Count; i++) {

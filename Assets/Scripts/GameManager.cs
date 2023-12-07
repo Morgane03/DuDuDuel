@@ -32,19 +32,19 @@ public class GameManager : MonoBehaviour
 
     public void WinnerOfAGame(int whichPlayer) {
         switch (whichPlayer) {
-            case 1: // Cas Joueur 1 gagne la partie
+            case 1: // Case Player 1 win the Game.
 
                 generalScorePlayerOne++;
                 break;
-            case 2: // Cas Joueur 2 gagne la partie
+            case 2: // Case Player 2 win the Game.
 
                 generalScorePlayerTwo++;
                 break;
-            case 3: // Cas Joueur 3 gagne la partie
+            case 3: // Case Player 3 win the Game. 
 
                 generalScorePlayerThree++;
                 break;
-            case 4: // Cas Joueur 4 gagne la partie
+            case 4: // Case Player 4 win the Game.
 
                 generalScorePlayerFour++;
                 break;
