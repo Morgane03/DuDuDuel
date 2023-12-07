@@ -8,25 +8,20 @@ using TMPro;
 // made using this : https://www.youtube.com/watch?v=qXbjyzBlduY&t=799s
 public class RaceRebindingDisplay : MonoBehaviour
 {
+    [Header("Player Inputs")]
+    [SerializeField] private PlayerInput _playerOneInput;
+    [SerializeField] private PlayerInput _playerTwoInput;
+    [SerializeField] private PlayerInput _playerThreeInput;
+    [SerializeField] private PlayerInput _playerFourInput;
+
+    [Header("UI InputBox")]
+    public List<GameObject> inputBoxes;
+
+    [Header("UI InputText")]
+    public List<TMP_Text> boundInputTexts;
+
     public InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
-    public void RebindKeyboard(InputActionReference _ref)
-    {
-        InputAction _action = _ref.action;
-        _action.Disable();
-        rebindingOperation = _ref.action.PerformInteractiveRebinding(0)
-            .WithControlsExcluding("Mouse")
-            .WithControlsExcluding("Gamepad")
-            .WithControlsExcluding("Touchpad")
-            .OnMatchWaitForAnother(0.1f)
-            .OnComplete(operation => RebindComplete(_action))
-            .Start();
-    }
-    void RebindComplete(InputAction _action)
-    {
-        Debug.Log(rebindingOperation.action.bindings[0].effectivePath);
-        _action.Enable();
-        rebindingOperation.Dispose();
-        Debug.Log(InputControlPath.ToHumanReadableString(_action.bindings[0].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice));
-    }
+    // Rebinding P1 keys
+      
 }
