@@ -8,30 +8,29 @@ public class PlayerLoseCondition : MonoBehaviour
     { 
         if(other.name == "Player1")
         {
-            ChanceGameManager.Instance.playerOneDie = true;
+            ChanceGameManager.Instance.isPlayerOneDied = true;
             other.gameObject.SetActive(false);
+            ChanceGameManager.Instance.PlayerWin();
         }
 
         if (other.name == "Player2")
         {
-            ChanceGameManager.Instance.playerTwoDie = true;
+            ChanceGameManager.Instance.isPlayerTwoDied = true;
             other.gameObject.SetActive(false);
+            ChanceGameManager.Instance.PlayerWin();
         }
 
         if (other.name == "Player3")
         {
-            ChanceGameManager.Instance.playerThreeDie = true;
+            ChanceGameManager.Instance.isPlayerThreeDied = true;
             other.gameObject.SetActive(false);
+            ChanceGameManager.Instance.PlayerWin();
         }
 
         if (other.name == "Player4")
         {
-            ChanceGameManager.Instance.playerFourDie = true;
+            ChanceGameManager.Instance.isPlayerFourDied = true;
             other.gameObject.SetActive(false);
-        }
-
-        if (other.tag != "Plateform")
-        {
             ChanceGameManager.Instance.PlayerWin();
         }
     }

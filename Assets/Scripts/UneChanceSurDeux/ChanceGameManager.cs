@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ChanceGameManager : MonoBehaviour
 {
@@ -30,12 +31,14 @@ public class ChanceGameManager : MonoBehaviour
     public TextMeshProUGUI textWin;
 
     [SerializeField]
-    public bool playerOneDie;
-    public bool playerTwoDie;
-    public bool playerThreeDie;
-    public bool playerFourDie;
+    public bool isPlayerOneDied;
+    public bool isPlayerTwoDied;
+    public bool isPlayerThreeDied;
+    public bool isPlayerFourDied;
 
-    public int scoreWin = 100;
+    public List<GameObject> playerList;
+
+    public int scoreWin = 1;
     public void StartGame()
     {
         gameLauch = true;
@@ -44,43 +47,7 @@ public class ChanceGameManager : MonoBehaviour
 
     public void PlayerWin()
     {
-        if (playerTwoDie && playerThreeDie && playerFourDie && !playerOneDie)
-        {
-            gameLauch = false;
-            textWin.text = "player 1 win";
-            scoreWin = 100;
-            ScoreManager.Instance.ScoreUpdatePlayerOne += Notify;
 
-        }
-
-        if (playerOneDie && playerThreeDie && playerFourDie && !playerTwoDie)
-        {
-            gameLauch = false;
-            textWin.text = "player 2 win";
-        }
-
-        if (playerOneDie && playerTwoDie && playerFourDie && !playerThreeDie)
-        {
-            gameLauch = false;
-            textWin.text = "player 3 win";
-        }
-
-        if (playerOneDie && playerTwoDie && playerThreeDie && !playerFourDie)
-        {
-            gameLauch = false;
-            textWin.text = "player 4 win";
-        }
-
-        if (playerOneDie && playerTwoDie && playerThreeDie && playerFourDie)
-        {
-            gameLauch = false;
-            textWin.text = "no win";
-        }
     }
 
-    public void Notify(int score)
-    {
-        scoreWin += score;
-        ScoreManager.Instance.SetScorePlayerOne(score);
-    }
 }
