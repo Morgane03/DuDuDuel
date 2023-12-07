@@ -263,11 +263,22 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 m_RebindOperation = null;
             }
 
+            // Disable the action befire error
+            action.Disable();
+
             // Configure the rebind.
             m_RebindOperation = action.PerformInteractiveRebinding(bindingIndex)
+                .WithControlsExcluding("<Mouse>/position")
+                .WithControlsExcluding("<Mouse>/delta")
+                .WithControlsExcluding("<Mouse>/scroll")
+                .WithControlsExcluding("Mouse")
+                .WithControlsExcluding("<Mouse>/ leftButton")
+                .WithControlsExcluding("<Mouse>/ rightButton")
+                .WithCancelingThrough("<Keyboard>/escape")
                 .OnCancel(
                     operation =>
                     {
+                        action.Enable();
                         m_RebindStopEvent?.Invoke(this, operation);
                         m_RebindOverlay?.SetActive(false);
                         UpdateBindingDisplay();
@@ -276,8 +287,18 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 .OnComplete(
                     operation =>
                     {
+                        action.Enable();
                         m_RebindOverlay?.SetActive(false);
                         m_RebindStopEvent?.Invoke(this, operation);
+
+                        if(CheckDupLicationBinding(action, bindingIndex, allCompositeParts))
+                        {
+                            action.RemoveBindingOverride(bindingIndex);
+                            CleanUp();
+                            PerformInteractiveRebind(action, bindingIndex, allCompositeParts);
+                            return;
+                        }
+
                         UpdateBindingDisplay();
                         CleanUp();
 
@@ -315,6 +336,36 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             m_RebindStartEvent?.Invoke(this, m_RebindOperation);
 
             m_RebindOperation.Start();
+        }
+
+        private bool CheckDupLicationBinding(InputAction action, int behindingIndex, bool allCompositeParts = false)
+        {
+            InputBinding newBinding = action.bindings[behindingIndex];
+            foreach(InputBinding binding in action.actionMap.bindings)
+            {
+                if(binding.action == newBinding.action)
+                {
+                    continue;
+                }
+                if(binding.effectivePath == newBinding.effectivePath)
+                {
+                    Debug.LogError($"Duplicate binding {binding.effectivePath} in {action.actionMap.name}", this);
+                    return true;
+                }
+            }
+            if (allCompositeParts)
+            {
+                for(int i =  1; i < behindingIndex; i++)
+                {
+                    if (action.bindings[i].effectivePath == newBinding.overridePath)
+                    {
+                        Debug.LogError($"Duplicate binding {action.bindings[i].effectivePath} in {action.actionMap.name}", this);   
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         protected void OnEnable()
