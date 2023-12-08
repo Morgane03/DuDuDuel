@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Winer : MonoBehaviour
@@ -8,6 +9,9 @@ public class Winer : MonoBehaviour
     public bool colliderZoneWinSP = false;
     public bool colliderZoneWinTP = false;
     public bool colliderZoneWinFoP = false;
+
+    public GameObject winCanva;
+    public TextMeshProUGUI winText;
 
     public void OnTriggerEnter(Collider playercollider)
     {
@@ -18,6 +22,8 @@ public class Winer : MonoBehaviour
             GameManager.Instance.WinnerOfAGame(playercollider.gameObject.GetComponent<PlayerIDs>().GetPlayerID());
             colliderZoneWinFP = false;
             Debug.Log("Player One Win");
+            winCanva.SetActive(true);
+            winText.text = "Player One Win";
         }
         
        if(playercollider.gameObject.tag == "PlayerTwo")
@@ -25,6 +31,8 @@ public class Winer : MonoBehaviour
             colliderZoneWinSP = true;
             GameManager.Instance.WinnerOfAGame(playercollider.gameObject.GetComponent<PlayerIDs>().GetPlayerID());
             colliderZoneWinSP = false;
+            winCanva.SetActive(true);
+            winText.text = "Player Two Win";
         }
 
         if (playercollider.gameObject.tag == "PlayerThree")
@@ -32,6 +40,8 @@ public class Winer : MonoBehaviour
             colliderZoneWinTP = true;
             GameManager.Instance.WinnerOfAGame(playercollider.gameObject.GetComponent<PlayerIDs>().GetPlayerID());
             colliderZoneWinTP = false;
+            winCanva.SetActive(true);
+            winText.text = "Player Three Win";
         }
 
         if (playercollider.gameObject.tag == "PlayerFour")
@@ -39,6 +49,8 @@ public class Winer : MonoBehaviour
             colliderZoneWinFoP = true;
             GameManager.Instance.WinnerOfAGame(playercollider.gameObject.GetComponent<PlayerIDs>().GetPlayerID());
             colliderZoneWinFoP = false;
+            winCanva.SetActive(true);
+            winText.text = "Player Four Win";
         }
     }
 }
