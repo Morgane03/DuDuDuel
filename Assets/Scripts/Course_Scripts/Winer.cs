@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Winer : MonoBehaviour
 {
-    public bool colliderZoneWinFP = false;
-    public bool colliderZoneWinSP = false;
-    public bool colliderZoneWinTP = false;
-    public bool colliderZoneWinFoP = false;
+    private bool colliderZoneWinFP = false;
+    private bool colliderZoneWinSP = false;
+    private bool colliderZoneWinTP = false;
+    private bool colliderZoneWinFoP = false;
 
     public GameObject winCanva;
     public TextMeshProUGUI winText;
