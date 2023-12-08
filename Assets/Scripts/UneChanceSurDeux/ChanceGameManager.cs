@@ -42,7 +42,7 @@ public class ChanceGameManager : MonoBehaviour
     {
         if(chanceGamePlayerList.Count == 0)
         {
-
+            Debug.Log("rafuuu");
         }
     }
 
