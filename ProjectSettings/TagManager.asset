@@ -9,6 +9,8 @@ TagManager:
   - PlayerOne
   - PlayerTwo
   - Plateform
+  - PlayerThree
+  - PlayerFour
   layers:
   - Default
   - TransparentFX
