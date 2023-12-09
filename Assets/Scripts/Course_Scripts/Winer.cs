@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class Winer : MonoBehaviour
 {
+    /// <summary>
+    /// FP = First Player
+    /// SP = Second Player
+    /// TP = Third Player
+    /// FoP = Fourth Player
+    /// </summary>
     private bool colliderZoneWinFP = false;
     private bool colliderZoneWinSP = false;
     private bool colliderZoneWinTP = false;
