@@ -50,14 +50,14 @@ public class ChanceGameManager : MonoBehaviour
         chanceGamePlayerList.Add(PlayerOne.GetComponent<PlayerIDs>()); //add player id to the list
         chanceGamePlayerList.Add(PlayerTwo.GetComponent<PlayerIDs>());
 
-        if(DeviceManager.Instance.playersWanted == 3)
+        if(DeviceManager.Instance.playerNumber == 3)
         {
             PlayerThree.SetActive(true);
             PlayerThreeText.SetActive(true);
             chanceGamePlayerList.Add(PlayerThree.GetComponent<PlayerIDs>());
         }
 
-        if (DeviceManager.Instance.playersWanted == 4) //active player 3 and 4 and add them to the list
+        if (DeviceManager.Instance.playerNumber == 4) //active player 3 and 4 and add them to the list
         {
             PlayerThree.SetActive(true);
             PlayerFour.SetActive(true);

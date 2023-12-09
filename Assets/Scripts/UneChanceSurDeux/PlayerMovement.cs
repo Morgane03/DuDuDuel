@@ -42,21 +42,13 @@ public class PlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActions
         _direction4 = context.ReadValue<Vector2>();
     }
 
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        //
-    }
+    public void OnJump(InputAction.CallbackContext context) { }
 
-    public void OnFireBulletP1(InputAction.CallbackContext context)
-    {
-        //
-    }
+    public void OnFireBulletP1(InputAction.CallbackContext context) {}
 
-    public void OnFireBulletP2(InputAction.CallbackContext context)
-    {
-        //
-    }
-
+    public void OnFireBulletP2(InputAction.CallbackContext context) {}
+    public void OnFireBulletP3(InputAction.CallbackContext context) {}
+    public void OnFireBulletP4(InputAction.CallbackContext context) {}
     // Update is called once per frame
     void Update()
     {
