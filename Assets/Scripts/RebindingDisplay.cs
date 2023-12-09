@@ -28,8 +28,8 @@ public class RebindingDisplay : MonoBehaviour
 
     public InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
-    // Rebinding P1 keys
-    public void StartRebindingP1(string str) {
+    // Rebinding keys
+    public void StartRebinding(string str) {
 
         inputBoxP1.gameObject.transform.GetChild(1).gameObject.SetActive(false);
         inputBoxP1.gameObject.transform.GetChild(2).gameObject.SetActive(true);

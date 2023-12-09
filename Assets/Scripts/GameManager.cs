@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour
     }
 
     public bool gameLauched;
-
-
     public void WinnerOfAGame(int whichPlayer) {
         switch (whichPlayer) {
             case 1: // Case Player 1 win the Game.

@@ -54,7 +54,14 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     public void OnFireBulletP2(InputAction.CallbackContext context) { 
         //
     }
-
+    public void OnFireBulletP3(InputAction.CallbackContext context)
+    {
+        //
+    }
+    public void OnFireBulletP4(InputAction.CallbackContext context)
+    {
+        //
+    }
     // Update is called once per frame
     void Update()
     {

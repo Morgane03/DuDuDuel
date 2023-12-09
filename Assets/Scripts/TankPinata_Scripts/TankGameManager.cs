@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TankGameManager : MonoBehaviour
@@ -9,24 +10,24 @@ public class TankGameManager : MonoBehaviour
     public GameObject PlayerTwo;
     public GameObject PlayerThree;
     public GameObject PlayerFour;
+    private List<GameObject> PlayerList = new List<GameObject>();
 
     [Header("Players Scores")]
     public int P1TankGameScore;
     public int P2TankGameScore;
     public int P3TankGameScore;
     public int P4TankGameScore;
-    public List<int> playersScoresEndOfTheGame = new List<int>();
+    public List<int> PlayersScoresEndOfTheGame = new List<int>();
 
 
     [Header("Game State")]
     public GameObject startCanvas;
+    public GameObject endCanvas;
+    public TextMeshProUGUI uiWinnerText;
     public bool isGameStarted = false;
-    public bool isGameFinished = false;
+ // public bool isGameFinished = false;
 
-    [Header("UI Indications for Players in Game")]
-    public GameObject uiPlayer3Indication;
-    public GameObject uiPlayer4Indication;
-   
+    public GameObject uiPlayerIndicator;
 
     private static TankGameManager _instance;
     public static TankGameManager Instance { 
@@ -49,10 +50,18 @@ public class TankGameManager : MonoBehaviour
 
     public void Start() {
         isGameStarted = false;
-        isGameFinished = false;
+//      isGameFinished = false;
 
 
         startCanvas.SetActive(true);
+        uiPlayerIndicator.SetActive(true);
+        endCanvas.SetActive(false);
+
+
+        PlayerList.Add(PlayerOne);
+        PlayerList.Add(PlayerTwo);
+        PlayerList.Add(PlayerThree);
+        PlayerList.Add(PlayerFour);
     }
 
 
@@ -60,20 +69,22 @@ public class TankGameManager : MonoBehaviour
         isGameStarted = true;
         startCanvas.SetActive(false);
 
-        if(DeviceManager.Instance.playersWanted == 3) {
+        if(DeviceManager.Instance.playerNumber == 3) { // UI Keeps only three players 
             PlayerFour.SetActive(false);
-            uiPlayer3Indication.SetActive(false);
+            uiPlayerIndicator.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+
         }
-        else if(DeviceManager.Instance.playersWanted == 2) {
+        else if(DeviceManager.Instance.playerNumber == 2) { // UI Keeps only two players 
             PlayerFour.SetActive(false);
             PlayerThree.SetActive(false);
 
-            uiPlayer3Indication.SetActive(false);
-            uiPlayer4Indication.SetActive(false);
+            uiPlayerIndicator.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            uiPlayerIndicator.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+
         }
     }
 
-
+    // Controls which players are getting points
     public void GetPoint(int i, TankShooting tankShooting) {
         // Debug.Log(tankShooting);
         if (tankShooting.name == PlayerOne.name) {
@@ -102,15 +113,16 @@ public class TankGameManager : MonoBehaviour
     public void EndOfTheGame() {
 
         isGameStarted = false;
-        isGameFinished = true;
+//      isGameFinished = true;
 
-        playersScoresEndOfTheGame.Add(P1TankGameScore);
-        playersScoresEndOfTheGame.Add(P2TankGameScore);
-        playersScoresEndOfTheGame.Add(P3TankGameScore);
-        playersScoresEndOfTheGame.Add(P4TankGameScore);
+        PlayersScoresEndOfTheGame.Add(P1TankGameScore);
+        PlayersScoresEndOfTheGame.Add(P2TankGameScore);
+        PlayersScoresEndOfTheGame.Add(P3TankGameScore);
+        PlayersScoresEndOfTheGame.Add(P4TankGameScore);
 
         GameResults();
-        
+        endCanvas.SetActive(true);
+        uiPlayerIndicator.SetActive(false);
     }
 
     public void GameResults() {
@@ -119,16 +131,35 @@ public class TankGameManager : MonoBehaviour
         // picks up loop index to know which player has won.
         int loopIndex = 0;
 
-        for (int i = 0; i < playersScoresEndOfTheGame.Count; i++) {
+        for (int i = 0; i < PlayersScoresEndOfTheGame.Count; i++) {
 
-            if (playersScoresEndOfTheGame[i] > maxScore) {
+            if (PlayersScoresEndOfTheGame[i] > maxScore) {
 
-                maxScore = playersScoresEndOfTheGame[i];
+                maxScore = PlayersScoresEndOfTheGame[i];
                 loopIndex = i;
             }
         }
 
         GameManager.Instance.WinnerOfAGame(loopIndex + 1);
 
+        // Display winner in UI
+        switch (loopIndex + 1) {
+            case 1:
+
+                uiWinnerText.text = "Winner : Player 1";
+                break; 
+            case 2:
+
+                uiWinnerText.text = "Winner : Player 2";
+                break;
+            case 3:
+
+                uiWinnerText.text = "Winner : Player 3";
+                break;
+            case 4:
+
+                uiWinnerText.text = "Winner : Player 4";
+                break;
+        }
     }
 }

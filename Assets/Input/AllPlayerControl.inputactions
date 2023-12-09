@@ -44,11 +44,29 @@
                 {
                     "name": "FireBulletP2",
                     "type": "PassThrough",
-                    "id": "c6cbae39-809d-4b9f-be06-bcc014877d3f",
+                    "id": "e51a6dd8-f7a6-4595-98ed-8e118d020070",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "FireBulletP3",
+                    "type": "PassThrough",
+                    "id": "7f08b65b-b13f-4a98-b395-9fbc14ecab1e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "FireBulletP4",
+                    "type": "PassThrough",
+                    "id": "0ec53506-8fd1-4b05-bdfc-71616e176d16",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -164,17 +182,6 @@
                 },
                 {
                     "name": "",
-                    "id": "69f23f66-b390-4466-b710-e78043e70864",
-                    "path": "<Keyboard>/p",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "FireBulletP2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "58aab307-a5ec-4c5c-b743-c6e47cca6467",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
@@ -225,6 +232,39 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa783ba8-433a-43ce-b229-dd3ec992ca0b",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireBulletP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db4c2cdf-f380-4634-a893-a93bbd7f8cdd",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireBulletP3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bbed133b-7ced-4dd9-9423-e9ed38afa0ce",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireBulletP4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -449,15 +489,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "FireBulletP3",
-                    "type": "Button",
-                    "id": "79adb05f-0bb6-4a3c-b661-210829641966",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -562,17 +593,6 @@
                 },
                 {
                     "name": "",
-                    "id": "58707d25-e948-44a8-9268-cd088254fe83",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "FireBulletP3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "77cb61c4-bee6-4df4-bc6a-b9fea44d5b1f",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
@@ -658,15 +678,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "FireBulletP4",
-                    "type": "Button",
-                    "id": "d4c1f50b-56a7-4718-af93-381087d568b8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -821,17 +832,6 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9eea80e1-3a5d-45aa-acfa-a49e3772609b",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "FireBulletP4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
