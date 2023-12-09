@@ -20,12 +20,12 @@ public class GameLauched : MonoBehaviour
 
     private void Awake()
     {
-        // DontDestroyOnLoad(this);
         _instance = this;
     }
 
     public bool canMove;
-    
+
+    // Allows the player to move
     public void StartMovement()
     {
         canMove = true;

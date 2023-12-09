@@ -12,7 +12,7 @@ public class SplitScreen : MonoBehaviour
     [SerializeField] Camera _nullCamera;
 
 
-    //Activates the correct number of players given by the number of players button
+    // Activates the correct number of players given by the number of players button
     public void DisplayPlayer(int nbPlayer)
     {
         for(int i = 0; i< nbPlayer; i++)
@@ -21,7 +21,7 @@ public class SplitScreen : MonoBehaviour
         }
     }
 
-    //Activates the correct number of cameras given by the number of players button
+    // Activates the correct number of cameras given by the number of players button
     public void DisplayCamera(int nbPlayer)
     {
         _UICamera.gameObject.SetActive(false);

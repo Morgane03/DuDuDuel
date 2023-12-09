@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActions
 {
-    public bool _gameLauched;
 
     public float speed;
     public Transform firstPlayerTransform;
@@ -18,12 +17,6 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     private Vector3 _direction3;
     private Vector3 _direction4;
     private Vector3 _jumpDirection;
-
-
-    public void StartMovement()
-    {
-        _gameLauched = true;
-    }
 
     public void OnLook(InputAction.CallbackContext context)
     {
