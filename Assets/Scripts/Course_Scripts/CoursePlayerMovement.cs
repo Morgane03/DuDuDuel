@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActions
 {
+
     public float speed;
     public Transform firstPlayerTransform;
     public Transform secondPlayerTransform;
@@ -58,7 +59,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.Instance.gameLauched)
+        if (GameLauched.Instance.canMove || ChanceGameManager.Instance.gameLauch)
         {
             // first player movement
             firstPlayerTransform.Translate(_direction * (speed * Time.deltaTime));

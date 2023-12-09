@@ -13,6 +13,7 @@ public class Winer : MonoBehaviour
     public GameObject winCanva;
     public TextMeshProUGUI winText;
 
+    // Detects the player entering the area
     public void OnTriggerEnter(Collider playercollider)
     {
         
