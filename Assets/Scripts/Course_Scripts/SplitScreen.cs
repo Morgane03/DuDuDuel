@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SplitScreen : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class SplitScreen : MonoBehaviour
     [SerializeField] List<Camera> _camera;
     [SerializeField] Camera _UICamera;
     [SerializeField] Camera _nullCamera;
+
+    [SerializeField] List<TextMeshProUGUI> _playerText;
 
 
 
@@ -29,10 +32,19 @@ public class SplitScreen : MonoBehaviour
         Camera thirdCamera = _camera[2];
         Camera fourthCamera = _camera[3];
 
+        TextMeshProUGUI firstText = _playerText[0];
+        TextMeshProUGUI secondText = _playerText[1];
+        TextMeshProUGUI thirdText = _playerText[2];
+        TextMeshProUGUI fourthText = _playerText[3];
+
         if (nbPlayer == 2)
         {
             firstCamera.gameObject.SetActive(true);
             secondCamera.gameObject.SetActive(true);
+
+            //firstText.gameObject.SetActive(true);
+            //secondText.gameObject.SetActive(true);
+
             firstCamera.rect = new Rect(0, 0, 1f, 0.5F);
             secondCamera.rect = new Rect(0, 0.5f, 1f, 1);
         }
@@ -42,10 +54,14 @@ public class SplitScreen : MonoBehaviour
             secondCamera.gameObject.SetActive(true);
             thirdCamera.gameObject.SetActive(true);
             _nullCamera.gameObject.SetActive(true);
-            firstCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
-            secondCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
-            thirdCamera.rect = new Rect(0, 0.5f, 1f, 0.5f);
-            _nullCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            //firstText.gameObject.SetActive(true);
+            //secondText.gameObject.SetActive(true);
+            //thirdText.gameObject.SetActive(true);
+
+            thirdCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
+            _nullCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+            firstCamera.rect = new Rect(0, 0.5f, 1f, 0.5f);
+            secondCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
         }
         else if(nbPlayer == 4)
         {
@@ -53,6 +69,11 @@ public class SplitScreen : MonoBehaviour
             secondCamera.gameObject.SetActive(true);
             thirdCamera.gameObject.SetActive(true);
             fourthCamera.gameObject.SetActive(true);
+            /*firstText.gameObject.SetActive(true);
+            secondText.gameObject.SetActive(true);
+            thirdText.gameObject.SetActive(true);
+            fourthText.gameObject.SetActive(true);*/
+
             firstCamera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
             secondCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
             thirdCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
