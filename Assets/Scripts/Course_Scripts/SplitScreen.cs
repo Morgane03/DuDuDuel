@@ -11,10 +11,8 @@ public class SplitScreen : MonoBehaviour
     [SerializeField] Camera _UICamera;
     [SerializeField] Camera _nullCamera;
 
-    [SerializeField] List<TextMeshProUGUI> _playerText;
 
-
-
+    //Activates the correct number of players given by the number of players button
     public void DisplayPlayer(int nbPlayer)
     {
         for(int i = 0; i< nbPlayer; i++)
@@ -23,6 +21,7 @@ public class SplitScreen : MonoBehaviour
         }
     }
 
+    //Activates the correct number of cameras given by the number of players button
     public void DisplayCamera(int nbPlayer)
     {
         _UICamera.gameObject.SetActive(false);
@@ -32,18 +31,11 @@ public class SplitScreen : MonoBehaviour
         Camera thirdCamera = _camera[2];
         Camera fourthCamera = _camera[3];
 
-        TextMeshProUGUI firstText = _playerText[0];
-        TextMeshProUGUI secondText = _playerText[1];
-        TextMeshProUGUI thirdText = _playerText[2];
-        TextMeshProUGUI fourthText = _playerText[3];
 
         if (nbPlayer == 2)
         {
             firstCamera.gameObject.SetActive(true);
             secondCamera.gameObject.SetActive(true);
-
-            //firstText.gameObject.SetActive(true);
-            //secondText.gameObject.SetActive(true);
 
             firstCamera.rect = new Rect(0, 0, 1f, 0.5F);
             secondCamera.rect = new Rect(0, 0.5f, 1f, 1);
@@ -54,9 +46,6 @@ public class SplitScreen : MonoBehaviour
             secondCamera.gameObject.SetActive(true);
             thirdCamera.gameObject.SetActive(true);
             _nullCamera.gameObject.SetActive(true);
-            //firstText.gameObject.SetActive(true);
-            //secondText.gameObject.SetActive(true);
-            //thirdText.gameObject.SetActive(true);
 
             thirdCamera.rect = new Rect(0, 0, 0.5f, 0.5f);
             _nullCamera.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
@@ -69,10 +58,6 @@ public class SplitScreen : MonoBehaviour
             secondCamera.gameObject.SetActive(true);
             thirdCamera.gameObject.SetActive(true);
             fourthCamera.gameObject.SetActive(true);
-            /*firstText.gameObject.SetActive(true);
-            secondText.gameObject.SetActive(true);
-            thirdText.gameObject.SetActive(true);
-            fourthText.gameObject.SetActive(true);*/
 
             firstCamera.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
             secondCamera.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
