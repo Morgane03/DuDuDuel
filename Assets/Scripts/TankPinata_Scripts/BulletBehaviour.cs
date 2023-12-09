@@ -18,7 +18,7 @@ public class BulletBehaviour : MonoBehaviour
 
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if(!TankGameManager.Instance.isGameFinished) {
+        if(TankGameManager.Instance.isGameStarted) {
             TankGameManager.Instance.GetPoint(pointGivenOnHit, tankShooting);
         }
         Destroy(gameObject);
