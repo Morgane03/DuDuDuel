@@ -12,13 +12,15 @@ public class PlayerLoseCondition : MonoBehaviour
         }
     }
 
-    public void OnPlayerDeath(GameObject gameObject) //retire le joueur de la liste et de la partie
+    public void OnPlayerDeath(GameObject gameObject) //remove player from the list and game
     {
         gameObject.GetComponent<PlayerIDs>();
         ChanceGameManager.Instance.chanceGamePlayerList.Remove(gameObject.GetComponent<PlayerIDs>());
-        gameObject.SetActive(false);
-        Debug.Log(gameObject.name);
 
-        ChanceGameManager.Instance.ChanceGamePlayerNumber();
+        if(ChanceGameManager.Instance.chanceGamePlayerList.Count == 1) //checks if th player list = 1, and call chanceGameManager
+        {
+            ChanceGameManager.Instance.ChanceGamePlayerWinner();
+        }
+        gameObject.SetActive(false);
     }
 }
