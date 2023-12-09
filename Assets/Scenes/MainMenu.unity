@@ -517,8 +517,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tank Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 73.85
+  m_fontSize: 104.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1250,8 +1250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -425.0802, y: -2.0757217}
-  m_SizeDelta: {x: 778.7849, y: 840.3709}
+  m_AnchoredPosition: {x: -384.96326, y: -3}
+  m_SizeDelta: {x: 698.551, y: 665.1232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638613288
 MonoBehaviour:
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 604ed3badedf30a4fb1caf7d05cb5ca9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62f1d448938f1e14098c5e29bd09f603, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1458,8 +1458,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -426.3269, y: -2.0757217}
-  m_SizeDelta: {x: 781.2783, y: 840.3709}
+  m_AnchoredPosition: {x: -426.3269, y: -4.2153}
+  m_SizeDelta: {x: 781.2783, y: 488.8044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685570984
 MonoBehaviour:
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5847040e11668374e84aa9b025c13092, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 127f36737511ee44faa582aed3ac93c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2231,8 +2231,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Chance Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.4
+  m_fontSize: 88.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2438,18 +2438,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Player One : Move with Z or S and shoot with D.
+  m_text: 'Players can shoot, you can choose your key before start the game
 
 
-    Player Two : Move
-    with up and down arrow keys, use left arrow key to shoot.
-
-
-    Goal : First
-    player to kill the other player win.'
+    Goal
+    : The player who shoot most at the target.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3472,19 +3468,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Player One (Blue) : Move with Q or D.
-
-
-    Player tWO (Red) : Move with
-    left and right arrow keys.
-
-
-    GOal : A giant wooden crate will fall, you must
-    avoid it in order to win this game. Problem : you can''t see it until it''s too
-    late, so you have to chose a side and prey to not get pounded.'
+  m_text: "Players can move left and right  :\n\t- Player one :  key A and D\n\t-
+    Player two : left and right arrows\n\t- Player three and four : left joystick\n\nGoal
+    : A lot of wooden crate will fall, you must avoid it in order to win this game."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3508,7 +3497,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.55
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5095,7 +5084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1776204170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5606,8 +5595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -426.3269, y: -2.0757217}
-  m_SizeDelta: {x: 781.2783, y: 840.3709}
+  m_AnchoredPosition: {x: -426.3269, y: -6}
+  m_SizeDelta: {x: 700, y: 607.2307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078068436
 MonoBehaviour:
@@ -5629,7 +5618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7c3821e80f8d23f48afbda27eb437aae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9851c724533e77142bf44d80a03a2fa7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
