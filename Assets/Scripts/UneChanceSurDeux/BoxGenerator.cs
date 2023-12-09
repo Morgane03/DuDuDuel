@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxGenerator : MonoBehaviour
 {
-    public GameObject boxPrefab;    //a mettre dans le gameManager
+    public GameObject boxPrefab;    
 
     public Vector3 boxLenght;
 
@@ -14,20 +14,20 @@ public class BoxGenerator : MonoBehaviour
     public GameObject positionLeft;
     public GameObject positionRight;
 
-    public void RandomSize() //random taille de la caisse
+    public void RandomSize() //random box size
     {
         Vector3 randomLenght = lenghtA - lenghtB;
         boxLenght = lenghtA + Random.value * randomLenght;
         boxPrefab.gameObject.transform.localScale = boxLenght;
     }
-    public void RandomPosition()  //random position entre 2 points
+    public void RandomPosition()  //random position between 2 points
     {
         Vector3 randomPos = positionLeft.transform.position - positionRight.transform.position;
         Vector3 targetPos = positionRight.transform.position + Random.value * randomPos;
         boxPrefab.transform.position = targetPos;
     }
 
-    public void CreateBox()
+    public void CreateBox() //create box with position and size
     {
         if (ChanceGameManager.Instance.gameLauch)
         {
