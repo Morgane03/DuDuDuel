@@ -515,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tank Game
+  m_text: Tank Pinata
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104.15
+  m_fontSize: 97.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2093,9 +2093,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Players can move left and right  :\n\t- Player one :  key A and D\n\t-
     Player two : left and right arrows\n\t- Player three : key F and H\n\t- Player
-    four : key J and L\n\nIf one player jump, all the player jump. They can jump
-    with key W, T, I and up arrows.\n\nGoal : the first player who reaches the end
-    of the race is the winner"
+    four : key J and L\n\nIf someone decides to jump, everyone will make a bounce.\n\nGoal
+    : First player at the end of the race wins the game."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -2441,8 +2440,12 @@ MonoBehaviour:
   m_text: 'Players can shoot, you can choose your key before start the game
 
 
-    Goal
-    : The player who shoot most at the target.'
+    A
+    maximum of 4 Tanks, and a giant cubic pinata. The more you''ll shoot at it, the
+    more you''ll get points from it.
+
+    Winner will be the tank which hits more
+    in it.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -3470,7 +3473,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Players can move left and right  :\n\t- Player one :  key A and D\n\t-
     Player two : left and right arrows\n\t- Player three and four : left joystick\n\nGoal
-    : A lot of wooden crate will fall, you must avoid it in order to win this game."
+    : A lot of wooden crates will fall, you must avoid them in order to win the game."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -5084,7 +5087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1776204170
 RectTransform:
   m_ObjectHideFlags: 0
