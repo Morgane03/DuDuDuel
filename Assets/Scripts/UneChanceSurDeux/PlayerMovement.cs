@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActions
+public class PlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActions
 {
 
     public float speed;
@@ -32,7 +32,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     {
         _direction2 = context.ReadValue<Vector2>();
     }
-    
+
     public void OnMoveP3(InputAction.CallbackContext context)
     {
         _direction3 = context.ReadValue<Vector2>();
@@ -41,10 +41,10 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
     {
         _direction4 = context.ReadValue<Vector2>();
     }
-    
+
     public void OnJump(InputAction.CallbackContext context)
     {
-        _jumpDirection = context.ReadValue<Vector2>();
+        //
     }
 
     public void OnFireBulletP1(InputAction.CallbackContext context)
@@ -52,14 +52,15 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
         //
     }
 
-    public void OnFireBulletP2(InputAction.CallbackContext context) { 
+    public void OnFireBulletP2(InputAction.CallbackContext context)
+    {
         //
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameLauched.Instance.canMove)
+        if (ChanceGameManager.Instance.gameLauch)
         {
             // first player movement
             firstPlayerTransform.Translate(_direction * (speed * Time.deltaTime));
@@ -69,7 +70,7 @@ public class CoursePlayerMovement : MonoBehaviour, AllPlayerControl.IPlayerActio
             secondPlayerTransform.Translate(_direction2 * (speed * Time.deltaTime));
             secondPlayerTransform.Translate(_jumpDirection * (speed * Time.deltaTime));
 
-            
+
             //third player movement
             thirdPlayerTransform.Translate(_direction3 * (speed * Time.deltaTime));
             thirdPlayerTransform.Translate(_jumpDirection * (speed * Time.deltaTime));
