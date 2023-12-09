@@ -25,7 +25,6 @@ public class TankGameManager : MonoBehaviour
     public GameObject endCanvas;
     public TextMeshProUGUI uiWinnerText;
     public bool isGameStarted = false;
- // public bool isGameFinished = false;
 
     public GameObject uiPlayerIndicator;
 
@@ -50,7 +49,6 @@ public class TankGameManager : MonoBehaviour
 
     public void Start() {
         isGameStarted = false;
-//      isGameFinished = false;
 
 
         startCanvas.SetActive(true);
@@ -113,7 +111,6 @@ public class TankGameManager : MonoBehaviour
     public void EndOfTheGame() {
 
         isGameStarted = false;
-//      isGameFinished = true;
 
         PlayersScoresEndOfTheGame.Add(P1TankGameScore);
         PlayersScoresEndOfTheGame.Add(P2TankGameScore);

@@ -8056,9 +8056,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1830401480}
   - component: {fileID: 1830401479}
+  - component: {fileID: 1830401477}
   - component: {fileID: 1830401478}
   - component: {fileID: 1830401481}
-  - component: {fileID: 1830401477}
   - component: {fileID: 1830401482}
   m_Layer: 0
   m_Name: FirstPlayerTank
@@ -8253,14 +8253,10 @@ MonoBehaviour:
     m_ActionId: 6e2e25fa-5034-4843-bd39-159cf751f85b
     m_ActionName: Player/Move
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8f518d1d-0cd0-4fd7-a1dd-4c9d40fc2c87
-    m_ActionName: Player/Look
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1830401481}
         m_TargetAssemblyTypeName: TankShooting, Assembly-CSharp
-        m_MethodName: OnFireBulletP1
+        m_MethodName: OnFireBullet
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8278,24 +8274,12 @@ MonoBehaviour:
     m_ActionName: Player2/MoveP2
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 60b9a5d8-a5b3-4dc3-b098-733457a619d5
-    m_ActionName: Player2/Look
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 0a3431de-688a-4ae2-ba2f-f2c22d9e6ce5
     m_ActionName: Player3/MoveP3
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: ac5a72c5-a1cf-4c58-bd56-484d3862f2e2
-    m_ActionName: Player3/Look
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: f17fbae0-1884-4800-af43-e618f5c44771
     m_ActionName: Player4/MoveP4
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4bcb89d7-ba1d-48b6-b511-f66fe4ff86b1
-    m_ActionName: Player4/Look
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 3cebe9a0-c46e-4f84-b754-1fe9da41e861
@@ -8356,7 +8340,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 173454555}
         m_TargetAssemblyTypeName: TankShooting, Assembly-CSharp
-        m_MethodName: OnFireBulletP2
+        m_MethodName: OnFireBullet
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8372,7 +8356,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1965609748}
         m_TargetAssemblyTypeName: TankShooting, Assembly-CSharp
-        m_MethodName: OnFireBulletP3
+        m_MethodName: OnFireBullet
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8388,7 +8372,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 374560857}
         m_TargetAssemblyTypeName: TankShooting, Assembly-CSharp
-        m_MethodName: OnFireBulletP4
+        m_MethodName: OnFireBullet
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
