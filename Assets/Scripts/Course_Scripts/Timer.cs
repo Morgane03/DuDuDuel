@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
         if (isRunning)
         {
             _currentTime += Time.deltaTime;
+            PlayerPrefs.SetFloat("RaceBestTiming", _currentTime);
             //Debug.Log(_currentTime);
         }
     }

@@ -17,7 +17,7 @@ public class FallObject : MonoBehaviour
         if (collision.tag == "Plateform")
         {
             Destroy(gameObject);
-            ChanceGameManager.Instance.HowManyBox();
+            ChanceGameManager.Instance.CountBoxFallen();
         }
     }
 }

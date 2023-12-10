@@ -37,11 +37,11 @@ public class Leaderboard : MonoBehaviour
                 break;
             case "Chance":
 
-
+                scoreEachGame.text = PlayerPrefs.GetInt("ChanceGameMaxBoxFallen").ToString();
                 break;
             case "Course":
 
-
+                scoreEachGame.text = PlayerPrefs.GetFloat("RaceBestTiming").ToString();
                 break;
         }
 

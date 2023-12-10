@@ -20,7 +20,6 @@ public class ChanceGameManager : MonoBehaviour
     }
     void Start()
     {
-        // DontDestroyOnLoad(this);
         _instance = this;
     }
     public bool gameLauch;
@@ -78,9 +77,13 @@ public class ChanceGameManager : MonoBehaviour
         boxGenerator.CreateBox(); //The box beging to fall
     }
 
-    public void HowManyBox()
+    public void CountBoxFallen()
     {
         numberOfBoxFallen++;
+        if(PlayerPrefs.GetInt("ChanceGameMaxBoxFallen") < numberOfBoxFallen) {
+            PlayerPrefs.SetInt("ChanceGameMaxBoxFallen", numberOfBoxFallen);
+        }
+        
     }
 
     public void ChanceGamePlayerWinner()
