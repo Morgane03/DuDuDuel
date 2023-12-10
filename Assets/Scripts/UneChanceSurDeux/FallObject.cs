@@ -1,10 +1,8 @@
-using System.Collections;
 using UnityEngine;
 
 public class FallObject : MonoBehaviour
 {
     public float speed;
-    public bool stopFall;
 
     public void Update()
     {
@@ -19,6 +17,7 @@ public class FallObject : MonoBehaviour
         if (collision.tag == "Plateform")
         {
             Destroy(gameObject);
+            ChanceGameManager.Instance.HowManyBox();
         }
     }
 }

@@ -1124,6 +1124,7 @@ MonoBehaviour:
   PlayerFour: {fileID: 1486356693}
   PlayerThreeText: {fileID: 663236313}
   PlayerFourText: {fileID: 1833537762}
+  numberOfBoxFallen: 0
   canvaEndGame: {fileID: 224540395}
 --- !u!4 &977626333
 Transform:
@@ -2693,8 +2694,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07443149, y: 9.645973, z: 2.723607}
-  m_Center: {x: -0.47569308, y: 3.5374138, z: -0.0029929932}
+  m_Size: {x: 0.064639375, y: 9.645973, z: 2.723607}
+  m_Center: {x: -0.48058912, y: 3.5374138, z: -0.0029929932}
 --- !u!65 &1846755188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2714,8 +2715,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07708158, y: 9.645973, z: 3.1751943}
-  m_Center: {x: 0.49563447, y: 3.5374138, z: -0.22878829}
+  m_Size: {x: 0.06728938, y: 9.645973, z: 3.1751943}
+  m_Center: {x: 0.5005306, y: 3.5374138, z: -0.22878829}
 --- !u!54 &1846755189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5285,7 +5286,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Box Game
+  m_text: Chance Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
