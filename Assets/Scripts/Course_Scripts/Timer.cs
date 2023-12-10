@@ -16,6 +16,10 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         isRunning = false;
+        if (PlayerPrefs.GetFloat("RaceBestTiming") > _currentTime){
+
+            PlayerPrefs.SetFloat("RaceBestTiming", _currentTime);
+        }
     }
 
     void Update()
@@ -23,8 +27,6 @@ public class Timer : MonoBehaviour
         if (isRunning)
         {
             _currentTime += Time.deltaTime;
-            PlayerPrefs.SetFloat("RaceBestTiming", _currentTime);
-            //Debug.Log(_currentTime);
         }
     }
 }
