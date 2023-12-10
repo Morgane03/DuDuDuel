@@ -1,9 +1,7 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class ChanceGameManager : MonoBehaviour
 {
@@ -40,11 +38,14 @@ public class ChanceGameManager : MonoBehaviour
     public GameObject PlayerThreeText;
     public GameObject PlayerFourText;
 
+    public int numberOfBoxFallen;
+
     public GameObject canvaEndGame;
 
     public void SetupGame()
     {
         gameLauch = false;
+        numberOfBoxFallen = 0;
         chanceGamePlayerList.Clear(); 
 
         chanceGamePlayerList.Add(PlayerOne.GetComponent<PlayerIDs>()); //add player id to the list
@@ -75,6 +76,11 @@ public class ChanceGameManager : MonoBehaviour
     {
         gameLauch = true;         //start the game
         boxGenerator.CreateBox(); //The box beging to fall
+    }
+
+    public void HowManyBox()
+    {
+        numberOfBoxFallen++;
     }
 
     public void ChanceGamePlayerWinner()
