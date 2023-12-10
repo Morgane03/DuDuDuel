@@ -27,7 +27,7 @@ public class TankShooting : MonoBehaviour
 
     public IEnumerator ReloadingBullet()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         if (bulletShot > 0) {
 
             bulletShot--;

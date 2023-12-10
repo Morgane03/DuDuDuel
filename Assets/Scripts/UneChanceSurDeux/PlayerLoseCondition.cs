@@ -17,7 +17,7 @@ public class PlayerLoseCondition : MonoBehaviour
         gameObject.GetComponent<PlayerIDs>();
         ChanceGameManager.Instance.chanceGamePlayerList.Remove(gameObject.GetComponent<PlayerIDs>());
 
-        if(ChanceGameManager.Instance.chanceGamePlayerList.Count == 1) //checks if th player list = 1, and call chanceGameManager
+        if(ChanceGameManager.Instance.chanceGamePlayerList.Count == 1) //checks if there is only one player left alive
         {
             ChanceGameManager.Instance.ChanceGamePlayerWinner();
         }
