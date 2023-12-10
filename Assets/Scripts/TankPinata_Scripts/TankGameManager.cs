@@ -27,6 +27,7 @@ public class TankGameManager : MonoBehaviour
     public bool isGameStarted = false;
 
     public GameObject uiPlayerIndicator;
+    public int tankGameBestScore;
 
     private static TankGameManager _instance;
     public static TankGameManager Instance { 
@@ -39,13 +40,10 @@ public class TankGameManager : MonoBehaviour
     }
 
     void Awake() {
-        _instance = this; 
+        _instance = this;
+
     }
 
-    public event Action<int> PlayerOneScore;
-    public event Action<int> PlayerTwoScore;
-    public event Action<int> PlayerThreeScore;
-    public event Action<int> PlayerFourScore;
 
     public void Start() {
         isGameStarted = false;
@@ -87,22 +85,19 @@ public class TankGameManager : MonoBehaviour
         // Debug.Log(tankShooting);
         if (tankShooting.name == PlayerOne.name) {
             P1TankGameScore += i;
-            PlayerOneScore?.Invoke(P1TankGameScore);
 
         }
         else if(tankShooting.name == PlayerTwo.name) {
             P2TankGameScore += i;
-            PlayerTwoScore?.Invoke(P2TankGameScore);
 
         }
         else if (tankShooting.name == PlayerThree.name) {
             P3TankGameScore += i;
-            PlayerThreeScore?.Invoke(P3TankGameScore);
 
         }
         else if (tankShooting.name == PlayerFour.name) {
             P4TankGameScore += i;
-            PlayerFourScore?.Invoke(P4TankGameScore);
+
         }
     }
 
@@ -136,6 +131,14 @@ public class TankGameManager : MonoBehaviour
                 loopIndex = i;
             }
         }
+
+
+        if(maxScore > PlayerPrefs.GetInt("TankGameBestScore")) {
+
+            tankGameBestScore = maxScore;
+            PlayerPrefs.SetInt("TankGameBestScore", tankGameBestScore);
+        }
+
 
         GameManager.Instance.WinnerOfAGame(loopIndex + 1);
 

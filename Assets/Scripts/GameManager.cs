@@ -25,10 +25,12 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
         _instance = this;
 
-        generalScorePlayerOne = PlayerPrefs.GetInt("ScorePlayerOne");
-        generalScorePlayerTwo = PlayerPrefs.GetInt("ScorePlayerTwo");
-        generalScorePlayerThree = PlayerPrefs.GetInt("ScorePlayerThree");
-        generalScorePlayerFour = PlayerPrefs.GetInt("ScorePlayerFour");
+        PlayerPrefs.SetInt("ScorePlayerOne", generalScorePlayerOne);
+        PlayerPrefs.SetInt("ScorePlayerTwo", generalScorePlayerTwo);
+        PlayerPrefs.SetInt("ScorePlayerThree", generalScorePlayerThree);
+        PlayerPrefs.SetInt("ScorePlayerFour", generalScorePlayerFour);
+
+
     }
 
 
@@ -36,25 +38,23 @@ public class GameManager : MonoBehaviour
         switch (whichPlayer) {
             case 1: // Case Player 1 win the Game.
 
-                PlayerPrefs.GetInt("ScorePlayerOne", generalScorePlayerOne);
-                PlayerPrefs.SetInt("ScorePlayerOne", generalScorePlayerOne++);
-
-                Debug.Log(PlayerPrefs.GetInt("ScorePlayerOne"));
+                generalScorePlayerOne++;
+                PlayerPrefs.SetInt("ScorePlayerOne", generalScorePlayerOne);
                 break;
             case 2: // Case Player 2 win the Game.
 
-                PlayerPrefs.GetInt("ScorePlayerTwo", generalScorePlayerTwo);
-                PlayerPrefs.SetInt("ScorePlayerTwo", generalScorePlayerTwo++);
+                generalScorePlayerTwo++;
+                PlayerPrefs.SetInt("ScorePlayerTwo", generalScorePlayerTwo);
                 break;
             case 3: // Case Player 3 win the Game. 
 
-                PlayerPrefs.GetInt("ScorePlayerThree", generalScorePlayerThree);
-                PlayerPrefs.SetInt("ScorePlayerThree", generalScorePlayerThree++);
+                generalScorePlayerThree++;
+                PlayerPrefs.SetInt("ScorePlayerThree", generalScorePlayerThree);
                 break;
             case 4: // Case Player 4 win the Game.
 
-                PlayerPrefs.GetInt("ScorePlayerFour", generalScorePlayerFour);
-                PlayerPrefs.SetInt("ScorePlayerFour", generalScorePlayerFour++);
+                generalScorePlayerFour++;
+                PlayerPrefs.SetInt("ScorePlayerFour", generalScorePlayerFour);
                 break;
         }
     }
