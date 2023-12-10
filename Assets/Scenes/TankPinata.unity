@@ -565,8 +565,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3926066143354975807, guid: b37ad0676cd1de3468ad74b23f93d9cd, type: 3}
   shootArea: {fileID: 1790449438}
-  bulletShot: 0
-  maxBullet: 5
 --- !u!1 &173958853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,8 +2007,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7738211942346496521, guid: 40bd13e3dcff9b046a3c019f05798dc9, type: 3}
   shootArea: {fileID: 1194396687}
-  bulletShot: 0
-  maxBullet: 5
 --- !u!1 &397293566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee57a2d9b2012745950189943f2ab5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLife: 100
+  targetLife: 0
+  tankTargetCustomLife: {fileID: 11400000, guid: cf0828e187c39ff4fbd35749559a427e, type: 2}
 --- !u!61 &411648473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9067,8 +9064,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 167928747236659448, guid: ec5cf733bc27b024eaf17810f999cee4, type: 3}
   shootArea: {fileID: 1185269875}
-  bulletShot: 0
-  maxBullet: 5
 --- !u!114 &1830401482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9542,8 +9537,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4132579489158547607, guid: bf3f36acdf5dab3488ea6aa57f5ecbb1, type: 3}
   shootArea: {fileID: 2041947143}
-  bulletShot: 0
-  maxBullet: 5
 --- !u!1 &1986674745
 GameObject:
   m_ObjectHideFlags: 0
